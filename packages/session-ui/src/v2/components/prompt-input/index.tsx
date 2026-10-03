@@ -560,6 +560,7 @@ export function PromptInputV2Select(props: {
 }) {
   return (
     <TooltipV2
+      class="min-w-0"
       placement="top"
       value={
         <>
@@ -573,7 +574,7 @@ export function PromptInputV2Select(props: {
           as={ButtonV2}
           variant="ghost-muted"
           size="normal"
-          class={`max-w-[220px] justify-start ![font-weight:440] ${props.class ?? ""}`}
+          class={`min-w-0 max-w-[140px] sm:max-w-[220px] justify-start ![font-weight:440] ${props.class ?? ""}`}
           aria-label={props.title}
         >
           {props.currentIcon}
