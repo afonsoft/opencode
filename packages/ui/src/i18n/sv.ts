@@ -105,6 +105,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Rensa filter",
   "ui.list.emptyWithFilter.prefix": "Inga resultat för",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "{{count}} till — fortsätt skriva för att filtrera",
   "ui.fileSearch.placeholder": "Hitta",
   "ui.fileSearch.previousMatch": "Föregående match",
   "ui.fileSearch.nextMatch": "Nästa match",

@@ -31,6 +31,7 @@ type ModelItem = ReturnType<ModelState["list"]>[number]
 
 const modelKey = (model: ModelItem) => `${model.provider.id}:${model.id}`
 const manageKey = "action:manage"
+const MODEL_PICKER_LIMIT = 200
 
 const sortModelGroups = (a: { category: string; items: ModelItem[] }, b: { category: string; items: ModelItem[] }) => {
   const aIndex = popularProviders.indexOf(a.category)
@@ -64,6 +65,7 @@ const ModelList: Component<{
   return (
     <List
       class={`flex-1 px-3 min-h-0 [&_[data-slot=list-scroll]]:flex-1 [&_[data-slot=list-scroll]]:min-h-0 ${props.class ?? ""}`}
+      limit={MODEL_PICKER_LIMIT}
       search={{ placeholder: language.t("dialog.model.search.placeholder"), autofocus: true, action: props.action }}
       emptyMessage={language.t("dialog.model.empty")}
       key={(x) => `${x.provider.id}:${x.id}`}
@@ -239,6 +241,7 @@ export function ModelSelectorPopoverV2(props: {
     <ModelSelectorPopoverV2View
       trigger={props.trigger}
       models={controller.models}
+      hidden={controller.hidden}
       groups={controller.groups}
       current={controller.current}
       select={controller.select}
@@ -265,14 +268,17 @@ function createModelSelectorController(input: {
       .filter((item) => (input.provider() ? item.provider.id === input.provider() : true)),
   )
 
+  const filtered = (search: string) => {
+    const query = search.trim()
+    const filtered = query
+      ? allModels().filter((item) => matchesModelSearch(query, [item.name, item.id, item.provider.name]))
+      : allModels()
+    return [...filtered].sort((a, b) => a.name.localeCompare(b.name))
+  }
+
   return {
-    models: (search: string) => {
-      const query = search.trim()
-      const filtered = query
-        ? allModels().filter((item) => matchesModelSearch(query, [item.name, item.id, item.provider.name]))
-        : allModels()
-      return [...filtered].sort((a, b) => a.name.localeCompare(b.name))
-    },
+    models: (search: string) => filtered(search).slice(0, MODEL_PICKER_LIMIT),
+    hidden: (search: string) => filtered(search).length - MODEL_PICKER_LIMIT,
     groups: (models: ModelItem[]) => {
       const byProvider = new Map<string, ModelItem[]>()
       for (const item of models) {
@@ -294,6 +300,7 @@ function createModelSelectorController(input: {
 function ModelSelectorPopoverV2View(props: {
   trigger: ModelSelectorTrigger
   models: (search: string) => ModelItem[]
+  hidden: (search: string) => number
   groups: (models: ModelItem[]) => { category: string; items: ModelItem[] }[]
   current: () => string | undefined
   select: (item: ModelItem) => void
@@ -497,6 +504,11 @@ function ModelSelectorPopoverV2View(props: {
                     </MenuV2.Group>
                   )}
                 </For>
+              </Show>
+              <Show when={props.hidden(store.search) > 0}>
+                <div class="px-3 py-1.5 text-11-regular text-v2-text-text-faint">
+                  {language.t("dialog.model.more", { count: String(props.hidden(store.search)) })}
+                </div>
               </Show>
             </div>
           </ScrollView>

@@ -105,6 +105,7 @@ export const dict = {
   "ui.list.clearFilter": "Филтрро тоза кунед",
   "ui.list.emptyWithFilter.prefix": "Ягон натиҷа барои",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "боз {{count}} — барои филтр кардан навиштанро давом диҳед",
   "ui.fileSearch.placeholder": "Пайдо кунед",
   "ui.fileSearch.previousMatch": "Бозии қаблӣ",
   "ui.fileSearch.nextMatch": "Бозии навбатй",

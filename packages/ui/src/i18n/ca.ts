@@ -109,6 +109,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Esborra el filtre",
   "ui.list.emptyWithFilter.prefix": "No hi ha resultats per a",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "{{count}} més — continueu escrivint per filtrar",
   "ui.fileSearch.placeholder": "Troba",
   "ui.fileSearch.previousMatch": "Coincidència anterior",
   "ui.fileSearch.nextMatch": "Coincidència següent",

@@ -107,6 +107,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Filtrni tozalash",
   "ui.list.emptyWithFilter.prefix": "uchun hech qanday natija topilmadi",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "yana {{count}} — filtrlash uchun yozishni davom eting",
   "ui.fileSearch.placeholder": "Toping",
   "ui.fileSearch.previousMatch": "Oldingi o'yin",
   "ui.fileSearch.nextMatch": "Keyingi o'yin",

@@ -228,6 +228,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Model gratis disediakan oleh OpenCode",
   "dialog.model.unpaid.addMore.title": "Tambahkan lebih banyak model dari penyedia populer",
   "dialog.model.unpaid.viewMoreProviders": "Lihat 70+ penyedia lainnya",
+  "dialog.model.more": "{{count}} lagi — terus ketik untuk memfilter",
 
   "dialog.provider.viewAll": "Tampilkan lebih banyak penyedia",
 
@@ -305,6 +306,11 @@ export const dict = {
   "provider.custom.error.baseURL.format": "Harus dimulai dengan http:// atau https://",
   "provider.custom.error.required": "Diperlukan",
   "provider.custom.error.duplicate": "Duplikat",
+  "provider.omniroute.title": "OmniRoute / 9router",
+  "provider.omniroute.description": "Hubungkan gateway OmniRoute atau 9router. Model ditemukan secara otomatis dari endpoint.",
+  "provider.omniroute.field.baseURL.placeholder": "https://omniroute.example.com/v1",
+  "dialog.provider.omniroute.label": "OmniRoute / 9router",
+  "settings.providers.omniroute.description": "Gateway kompatibel dengan OpenAI. Atur hanya endpoint dan kunci API.",
 
   "provider.disconnect.toast.disconnected.title": "{{provider}} terputus",
   "provider.disconnect.toast.disconnected.description": "Model {{provider}} tidak lagi tersedia.",
@@ -1042,6 +1048,16 @@ export const dict = {
   "settings.general.row.showCustomAgents.title": "Tampilkan agen",
   "settings.general.row.showCustomAgents.description":
     "Beralih antaragen di penyusun. Saat disembunyikan, Agen Build digunakan sebagai bawaan.",
+  "settings.general.row.showSessionReview.title": "Tombol tinjauan sesi",
+  "settings.general.row.showSessionReview.description": "Tampilkan tombol tinjauan (perubahan) di bilah alat sesi",
+  "settings.general.row.showSessionFiles.title": "Tombol berkas sesi",
+  "settings.general.row.showSessionFiles.description": "Tampilkan tombol penjelajah berkas di bilah alat sesi",
+  "settings.general.row.showSessionTerminal.title": "Tombol terminal sesi",
+  "settings.general.row.showSessionTerminal.description": "Tampilkan tombol terminal di bilah alat sesi",
+  "settings.general.row.showSessionTasks.title": "Tombol tugas sesi",
+  "settings.general.row.showSessionTasks.description": "Tampilkan tombol tugas di bilah alat sesi",
+  "settings.general.row.showSessionProgress.title": "Tombol progres sesi",
+  "settings.general.row.showSessionProgress.description": "Tampilkan tombol progres (konteks) sesi di bilah alat",
   "settings.general.row.reasoningSummaries.title": "Tampilkan ringkasan penalaran",
   "settings.general.row.reasoningSummaries.description": "Tampilkan ringkasan penalaran model di linimasa",
   "settings.general.row.shellToolPartsExpanded.title": "Bentangkan bagian alat shell",

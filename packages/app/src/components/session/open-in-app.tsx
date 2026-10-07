@@ -4,6 +4,7 @@ import { useLanguage } from "@/context/language"
 import { usePlatform } from "@/context/platform"
 import { useServer } from "@/context/server"
 import { Persist, persisted } from "@/utils/persist"
+import { copyText } from "@opencode-ai/ui/clipboard"
 import { showToast } from "@/utils/toast"
 
 export const OPEN_APPS = [
@@ -202,17 +203,18 @@ export function useOpenInApp(input: { directory: () => string }) {
   const copyPath = () => {
     const directory = input.directory()
     if (!directory) return
-    navigator.clipboard
-      .writeText(directory)
-      .then(() => {
-        showToast({
-          variant: "success",
-          icon: "circle-check",
-          title: language.t("session.share.copy.copied"),
-          description: directory,
-        })
+    void copyText(directory).then((copied) => {
+      if (!copied) {
+        showToast({ title: language.t("common.requestFailed") })
+        return
+      }
+      showToast({
+        variant: "success",
+        icon: "circle-check",
+        title: language.t("session.share.copy.copied"),
+        description: directory,
       })
-      .catch((err: unknown) => showRequestError(language, err))
+    })
   }
 
   return {

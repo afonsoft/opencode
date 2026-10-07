@@ -105,6 +105,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Hreinsaðu síu",
   "ui.list.emptyWithFilter.prefix": "Engar niðurstöður fyrir",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "{{count}} til viðbótar — haltu áfram að skrifa til að sía",
   "ui.fileSearch.placeholder": "Finndu",
   "ui.fileSearch.previousMatch": "Fyrri samsvörun",
   "ui.fileSearch.nextMatch": "Næsta samsvörun",

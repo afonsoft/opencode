@@ -106,6 +106,7 @@ export const dict = {
   "ui.list.clearFilter": "ជម្រះតម្រង",
   "ui.list.emptyWithFilter.prefix": "គ្មានលទ្ធផលសម្រាប់",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "បន្ថែម {{count}} ទៀត — បន្តវាយដើម្បីតម្រង",
   "ui.fileSearch.placeholder": "ស្វែងរក",
   "ui.fileSearch.previousMatch": "ការប្រកួតពីមុន",
   "ui.fileSearch.nextMatch": "ការប្រកួតបន្ទាប់",

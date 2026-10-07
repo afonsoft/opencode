@@ -105,6 +105,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "فیلتر را پاک کنید",
   "ui.list.emptyWithFilter.prefix": "هیچ نتیجه ای برای",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "{{count}} مورد دیگر — برای فیلتر کردن به تایپ ادامه دهید",
   "ui.fileSearch.placeholder": "پیدا کنید",
   "ui.fileSearch.previousMatch": "مسابقه قبلی",
   "ui.fileSearch.nextMatch": "مسابقه بعدی",

@@ -88,6 +88,7 @@ export const dict = {
   "ui.list.clearFilter": "필터 지우기",
   "ui.list.emptyWithFilter.prefix": "다음에 대한 결과 없음: ",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "{{count}}개 더 — 입력을 계속해 필터링하세요",
 
   "ui.messageNav.newMessage": "새 메시지",
 

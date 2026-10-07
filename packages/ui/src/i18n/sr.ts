@@ -110,6 +110,7 @@ export const dict = {
   "ui.list.clearFilter": "Обриши филтер",
   "ui.list.emptyWithFilter.prefix": "Нема резултата за",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "još {{count}} — nastavite da kucate za filtriranje",
   "ui.fileSearch.placeholder": "Пронађи",
   "ui.fileSearch.previousMatch": "Претходно подударање",
   "ui.fileSearch.nextMatch": "Следеће подударање",

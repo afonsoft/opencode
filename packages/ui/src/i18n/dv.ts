@@ -106,6 +106,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "ފިލްޓަރ ސާފުކުރުން",
   "ui.list.emptyWithFilter.prefix": "އެއްވެސް ނަތީޖާއެއް ނުލިބެއެވެ",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "{{count}} އިތުރު — ފިލްޓަރ ކުރުމަށް ލިޔުމަށް ކުރިއަށް ގެންދާ",
   "ui.fileSearch.placeholder": "ހޯދުން",
   "ui.fileSearch.previousMatch": "ކުރީ މެޗެވެ",
   "ui.fileSearch.nextMatch": "ދެން މެޗް",

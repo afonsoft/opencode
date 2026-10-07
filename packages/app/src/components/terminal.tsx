@@ -99,6 +99,7 @@ const useTerminalUiBindings = (input: {
 
     event.preventDefault()
     clipboard.setData("text/plain", selection)
+    input.term.clearSelection()
   }
 
   const handlePaste = (event: ClipboardEvent) => {
@@ -382,7 +383,7 @@ export const Terminal = (props: TerminalProps) => {
 
     event.preventDefault()
     event.stopImmediatePropagation()
-    if (URL.canParse(text) && new URL(text).protocol === "file:" && platform.openLocalFile) {
+    if (typeof URL.canParse === "function" && URL.canParse(text) && new URL(text).protocol === "file:" && platform.openLocalFile) {
       platform.openLocalFile(text)
       return
     }

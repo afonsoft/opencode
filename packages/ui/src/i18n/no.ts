@@ -91,6 +91,7 @@ export const dict: Record<Keys, string> = {
   "ui.list.clearFilter": "Tøm filter",
   "ui.list.emptyWithFilter.prefix": "Ingen resultater for",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "{{count}} flere — fortsett å skrive for å filtrere",
 
   "ui.messageNav.newMessage": "Ny melding",
 

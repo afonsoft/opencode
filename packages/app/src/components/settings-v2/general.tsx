@@ -438,6 +438,66 @@ export const SettingsGeneralV2: Component<{
             />
           </div>
         </SettingsRowV2>
+
+        <SettingsRowV2
+          title={language.t("settings.general.row.showSessionReview.title")}
+          description={language.t("settings.general.row.showSessionReview.description")}
+        >
+          <div data-action="settings-show-session-review">
+            <Switch
+              checked={settings.general.showSessionReview()}
+              onChange={(checked) => settings.general.setShowSessionReview(checked)}
+            />
+          </div>
+        </SettingsRowV2>
+
+        <SettingsRowV2
+          title={language.t("settings.general.row.showSessionFiles.title")}
+          description={language.t("settings.general.row.showSessionFiles.description")}
+        >
+          <div data-action="settings-show-session-files">
+            <Switch
+              checked={settings.general.showSessionFiles()}
+              onChange={(checked) => settings.general.setShowSessionFiles(checked)}
+            />
+          </div>
+        </SettingsRowV2>
+
+        <SettingsRowV2
+          title={language.t("settings.general.row.showSessionTerminal.title")}
+          description={language.t("settings.general.row.showSessionTerminal.description")}
+        >
+          <div data-action="settings-show-session-terminal">
+            <Switch
+              checked={settings.general.showSessionTerminal()}
+              onChange={(checked) => settings.general.setShowSessionTerminal(checked)}
+            />
+          </div>
+        </SettingsRowV2>
+
+        <SettingsRowV2
+          title={language.t("settings.general.row.showSessionTasks.title")}
+          description={language.t("settings.general.row.showSessionTasks.description")}
+        >
+          <div data-action="settings-show-session-tasks">
+            <Switch
+              checked={settings.general.showSessionTasks()}
+              onChange={(checked) => settings.general.setShowSessionTasks(checked)}
+            />
+          </div>
+        </SettingsRowV2>
+
+        <SettingsRowV2
+          title={language.t("settings.general.row.showSessionProgress.title")}
+          description={language.t("settings.general.row.showSessionProgress.description")}
+        >
+          <div data-action="settings-show-session-progress">
+            <Switch
+              checked={settings.general.showSessionProgress()}
+              onChange={(checked) => settings.general.setShowSessionProgress(checked)}
+            />
+          </div>
+        </SettingsRowV2>
       </SettingsListV2>
     </div>
   )

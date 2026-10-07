@@ -81,7 +81,7 @@ const notify: Platform["notify"] = async (title, description, onClick) => {
 }
 
 const openExternal: Platform["openExternal"] = (value) => {
-  if (!URL.canParse(value)) return
+  if (typeof URL.canParse !== "function" || !URL.canParse(value)) return
   const url = new URL(value)
   if (url.protocol !== "http:" && url.protocol !== "https:" && url.protocol !== "mailto:") return
   window.open(url.href, "_blank", "noopener,noreferrer")

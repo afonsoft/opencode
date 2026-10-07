@@ -226,6 +226,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "โมเดลฟรีที่จัดหาให้โดย OpenCode",
   "dialog.model.unpaid.addMore.title": "เพิ่มโมเดลเพิ่มเติมจากผู้ให้บริการยอดนิยม",
   "dialog.model.unpaid.viewMoreProviders": "ดูผู้ให้บริการเพิ่มเติมกว่า 70 ราย",
+  "dialog.model.more": "อีก {{count}} รายการ — พิมพ์ต่อเพื่อกรอง",
 
   "dialog.provider.viewAll": "แสดงผู้ให้บริการเพิ่มเติม",
 
@@ -303,6 +304,11 @@ export const dict = {
   "provider.custom.error.baseURL.format": "ต้องขึ้นต้นด้วย http:// หรือ https://",
   "provider.custom.error.required": "จำเป็น",
   "provider.custom.error.duplicate": "ซ้ำ",
+  "provider.omniroute.title": "OmniRoute / 9router",
+  "provider.omniroute.description": "เชื่อมต่อเกตเวย์ OmniRoute หรือ 9router โมเดลจะถูกค้นพบโดยอัตโนมัติจาก endpoint",
+  "provider.omniroute.field.baseURL.placeholder": "https://omniroute.example.com/v1",
+  "dialog.provider.omniroute.label": "OmniRoute / 9router",
+  "settings.providers.omniroute.description": "เกตเวย์ที่เข้ากันได้กับ OpenAI ตั้งค่าเฉพาะ endpoint และคีย์ API เท่านั้น",
 
   "provider.disconnect.toast.disconnected.title": "ยกเลิกการเชื่อมต่อ {{provider}} แล้ว",
   "provider.disconnect.toast.disconnected.description": "โมเดล {{provider}} ไม่พร้อมใช้งานอีกต่อไป",
@@ -936,6 +942,16 @@ export const dict = {
   "settings.general.row.showCustomAgents.title": "แสดงเอเจนต์",
   "settings.general.row.showCustomAgents.description":
     "สลับระหว่างเอเจนต์ในช่องเขียนข้อความ เมื่อซ่อน ระบบจะใช้เอเจนต์ Build เป็นค่าเริ่มต้น",
+  "settings.general.row.showSessionReview.title": "ปุ่มตรวจสอบเซสชัน",
+  "settings.general.row.showSessionReview.description": "แสดงปุ่มตรวจสอบ (การเปลี่ยนแปลง) ในแถบเครื่องมือของเซสชัน",
+  "settings.general.row.showSessionFiles.title": "ปุ่มไฟล์เซสชัน",
+  "settings.general.row.showSessionFiles.description": "แสดงปุ่มเรียกดูไฟล์ในแถบเครื่องมือของเซสชัน",
+  "settings.general.row.showSessionTerminal.title": "ปุ่มเทอร์มินัลเซสชัน",
+  "settings.general.row.showSessionTerminal.description": "แสดงปุ่มเทอร์มินัลในแถบเครื่องมือของเซสชัน",
+  "settings.general.row.showSessionTasks.title": "ปุ่มงานเซสชัน",
+  "settings.general.row.showSessionTasks.description": "แสดงปุ่มรายการสิ่งที่ต้องทำในแถบเครื่องมือของเซสชัน",
+  "settings.general.row.showSessionProgress.title": "ปุ่มความคืบหน้าเซสชัน",
+  "settings.general.row.showSessionProgress.description": "แสดงปุ่มความคืบหน้า (บริบท) ของเซสชันในแถบเครื่องมือ",
   "settings.general.row.reasoningSummaries.title": "แสดงสรุปการใช้เหตุผล",
   "settings.general.row.reasoningSummaries.description": "แสดงสรุปการใช้เหตุผลของโมเดลในไทม์ไลน์",
   "settings.general.row.shellToolPartsExpanded.title": "ขยายส่วนเครื่องมือ shell",

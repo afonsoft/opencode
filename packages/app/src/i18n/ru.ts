@@ -227,6 +227,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Бесплатные модели от OpenCode",
   "dialog.model.unpaid.addMore.title": "Добавьте больше моделей от популярных провайдеров",
   "dialog.model.unpaid.viewMoreProviders": "Посмотреть ещё более 70 провайдеров",
+  "dialog.model.more": "ещё {{count}} — продолжайте вводить текст для фильтрации",
 
   "dialog.provider.viewAll": "Показать больше провайдеров",
 
@@ -305,6 +306,11 @@ export const dict = {
   "provider.custom.error.baseURL.format": "Должен начинаться с http:// или https://",
   "provider.custom.error.required": "Обязательно",
   "provider.custom.error.duplicate": "Дубликат",
+  "provider.omniroute.title": "OmniRoute / 9router",
+  "provider.omniroute.description": "Подключите шлюз OmniRoute или 9router. Модели обнаруживаются автоматически с конечной точки.",
+  "provider.omniroute.field.baseURL.placeholder": "https://omniroute.example.com/v1",
+  "dialog.provider.omniroute.label": "OmniRoute / 9router",
+  "settings.providers.omniroute.description": "Шлюз, совместимый с OpenAI. Укажите только конечную точку и ключ API.",
 
   "provider.disconnect.toast.disconnected.title": "{{provider}} отключён",
   "provider.disconnect.toast.disconnected.description": "Модели {{provider}} больше недоступны.",
@@ -953,6 +959,16 @@ export const dict = {
   "settings.general.row.showCustomAgents.title": "Выбор агента",
   "settings.general.row.showCustomAgents.description":
     "Показывать переключатель агентов в редакторе запросов. Если он скрыт, по умолчанию используется агент Build.",
+  "settings.general.row.showSessionReview.title": "Кнопка обзора сеанса",
+  "settings.general.row.showSessionReview.description": "Показывать кнопку обзора (изменений) на панели инструментов сеанса",
+  "settings.general.row.showSessionFiles.title": "Кнопка файлов сеанса",
+  "settings.general.row.showSessionFiles.description": "Показывать кнопку обзора файлов на панели инструментов сеанса",
+  "settings.general.row.showSessionTerminal.title": "Кнопка терминала сеанса",
+  "settings.general.row.showSessionTerminal.description": "Показывать кнопку терминала на панели инструментов сеанса",
+  "settings.general.row.showSessionTasks.title": "Кнопка задач сеанса",
+  "settings.general.row.showSessionTasks.description": "Показывать кнопку задач на панели инструментов сеанса",
+  "settings.general.row.showSessionProgress.title": "Кнопка прогресса сеанса",
+  "settings.general.row.showSessionProgress.description": "Показывать кнопку прогресса (контекста) сеанса на панели инструментов сеанса",
   "settings.general.row.reasoningSummaries.title": "Показывать сводки рассуждений",
   "settings.general.row.reasoningSummaries.description": "Отображать сводки рассуждений модели в ленте",
 

@@ -228,6 +228,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Modelos gratuitos proporcionados por OpenCode",
   "dialog.model.unpaid.addMore.title": "Añadir más modelos de proveedores populares",
   "dialog.model.unpaid.viewMoreProviders": "Ver más de 70 proveedores",
+  "dialog.model.more": "{{count}} más — siga escribiendo para filtrar",
 
   "dialog.provider.viewAll": "Ver más proveedores",
 
@@ -306,6 +307,11 @@ export const dict = {
   "provider.custom.error.baseURL.format": "Debe comenzar con http:// o https://",
   "provider.custom.error.required": "Obligatorio",
   "provider.custom.error.duplicate": "Duplicado",
+  "provider.omniroute.title": "OmniRoute / 9router",
+  "provider.omniroute.description": "Conecta un gateway OmniRoute o 9router. Los modelos se descubren automáticamente desde el endpoint.",
+  "provider.omniroute.field.baseURL.placeholder": "https://omniroute.example.com/v1",
+  "dialog.provider.omniroute.label": "OmniRoute / 9router",
+  "settings.providers.omniroute.description": "Gateway compatible con OpenAI. Configura solo el endpoint y la clave API.",
 
   "provider.disconnect.toast.disconnected.title": "{{provider}} desconectado",
   "provider.disconnect.toast.disconnected.description": "Los modelos de {{provider}} ya no están disponibles.",
@@ -956,6 +962,16 @@ export const dict = {
   "settings.general.row.showCustomAgents.title": "Mostrar agente",
   "settings.general.row.showCustomAgents.description":
     "Cambiar de agente en el editor. Si se oculta, se usa el agente Build de forma predeterminada.",
+  "settings.general.row.showSessionReview.title": "Botón de revisión de la sesión",
+  "settings.general.row.showSessionReview.description": "Mostrar el botón de revisión (cambios) en la barra de herramientas de la sesión",
+  "settings.general.row.showSessionFiles.title": "Botón de archivos de la sesión",
+  "settings.general.row.showSessionFiles.description": "Mostrar el botón del explorador de archivos en la barra de herramientas de la sesión",
+  "settings.general.row.showSessionTerminal.title": "Botón de terminal de la sesión",
+  "settings.general.row.showSessionTerminal.description": "Mostrar el botón del terminal en la barra de herramientas de la sesión",
+  "settings.general.row.showSessionTasks.title": "Botón de tareas de la sesión",
+  "settings.general.row.showSessionTasks.description": "Mostrar el botón de tareas en la barra de herramientas de la sesión",
+  "settings.general.row.showSessionProgress.title": "Botón de progreso de la sesión",
+  "settings.general.row.showSessionProgress.description": "Mostrar el botón de progreso (contexto) de la sesión en la barra de herramientas de la sesión",
   "settings.general.row.reasoningSummaries.title": "Mostrar resúmenes de razonamiento",
   "settings.general.row.reasoningSummaries.description":
     "Mostrar resúmenes del razonamiento del modelo en la línea de tiempo",

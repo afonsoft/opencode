@@ -114,6 +114,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Clear filter",
   "ui.list.emptyWithFilter.prefix": "No results for",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "{{count}} more — keep typing to filter",
 
   "ui.fileSearch.placeholder": "Find",
   "ui.fileSearch.previousMatch": "Previous match",

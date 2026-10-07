@@ -113,6 +113,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Hapus filter",
   "ui.list.emptyWithFilter.prefix": "Tidak ada hasil untuk",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "{{count}} lagi — terus ketik untuk memfilter",
 
   "ui.fileSearch.placeholder": "Cari",
   "ui.fileSearch.previousMatch": "Kecocokan sebelumnya",

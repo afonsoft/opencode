@@ -118,6 +118,7 @@ export const dict = {
   "ui.list.clearFilter": "Filtreyi temizle",
   "ui.list.emptyWithFilter.prefix": "Sonuç bulunamadı:",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "{{count}} daha — filtrelemek için yazmaya devam edin",
 
   "ui.messageNav.newMessage": "Yeni mesaj",
 

@@ -113,6 +113,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Vymazať filter",
   "ui.list.emptyWithFilter.prefix": "Žiadne výsledky pre",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "ďalších {{count}} — na filtrovanie pokračujte v písaní",
   "ui.fileSearch.placeholder": "Hľadať",
   "ui.fileSearch.previousMatch": "Predchádzajúca zhoda",
   "ui.fileSearch.nextMatch": "Nasledujúca zhoda",

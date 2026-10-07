@@ -128,6 +128,7 @@ export const dict = {
   "ui.list.clearFilter": "مسح عامل التصفية",
   "ui.list.emptyWithFilter.prefix": "لا توجد نتائج لـ",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "{{count}} أخرى — استمر في الكتابة للتصفية",
 
   "ui.messageNav.newMessage": "رسالة جديدة",
 

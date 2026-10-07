@@ -192,6 +192,56 @@ type CustomDep = {
   get: (key: string) => Effect.Effect<string | undefined>
 }
 
+const OpenAICompatibleModelsResponse = Schema.Struct({
+  data: Schema.Array(
+    Schema.Struct({
+      id: Schema.String,
+      name: Schema.optional(Schema.String),
+    }),
+  ),
+})
+const decodeOpenAICompatibleModels = Schema.decodeUnknownSync(OpenAICompatibleModelsResponse)
+
+async function discoverOpenAICompatibleModels(input: {
+  providerID: ProviderV2.ID
+  baseURL: string
+  apiKey?: string
+}): Promise<Record<string, Model>> {
+  const res = await fetch(`${input.baseURL.replace(/\/+$/, "")}/models`, {
+    headers: input.apiKey ? { Authorization: `Bearer ${input.apiKey}` } : {},
+    signal: AbortSignal.timeout(30_000),
+  })
+  if (!res.ok) throw new Error(`Failed to list models from ${input.baseURL}: ${res.status}`)
+  const data = decodeOpenAICompatibleModels(await res.json())
+  return Object.fromEntries(
+    data.data.map((item) => [
+      item.id,
+      {
+        id: ModelV2.ID.make(item.id),
+        providerID: input.providerID,
+        name: item.name ?? item.id,
+        family: "",
+        api: { id: item.id, url: input.baseURL, npm: "@ai-sdk/openai-compatible" },
+        status: "active",
+        headers: {},
+        options: {},
+        cost: { input: 0, output: 0, cache: { read: 0, write: 0 } },
+        limit: { context: 0, output: 0 },
+        capabilities: {
+          temperature: false,
+          reasoning: false,
+          attachment: false,
+          toolcall: true,
+          input: { text: true, audio: false, image: false, video: false, pdf: false },
+          output: { text: true, audio: false, image: false, video: false, pdf: false },
+          interleaved: false,
+        },
+        release_date: "",
+      } satisfies Model,
+    ]),
+  )
+}
+
 function selectAzureLanguageModel(sdk: any, modelID: string, useChat: boolean) {
   if (useChat && sdk.chat) return sdk.chat(modelID)
   if (sdk.responses) return sdk.responses(modelID)
@@ -1703,6 +1753,26 @@ const layer = Layer.effect(
           if (provider.name) partial.name = provider.name
           if (provider.options) partial.options = provider.options
           mergeProvider(providerID, partial)
+        }
+
+        // Config-defined OpenAI-compatible providers with no declared models
+        // auto-discover them from the standard /models endpoint.
+        for (const [id, provider] of Object.entries(providers)) {
+          if (provider.source !== "config") continue
+          if (Object.keys(provider.models).length > 0) continue
+          const npm = cfg.provider?.[id]?.npm
+          if (npm !== undefined && npm !== "@ai-sdk/openai-compatible") continue
+          const baseURL = provider.options?.["baseURL"]
+          if (typeof baseURL !== "string" || !baseURL) continue
+          const apiKey =
+            provider.key ?? (typeof provider.options?.["apiKey"] === "string" ? provider.options["apiKey"] : undefined)
+          const providerID = ProviderV2.ID.make(id)
+          const discovered = yield* Effect.promise(() =>
+            discoverOpenAICompatibleModels({ providerID, baseURL, apiKey }).catch(
+              () => ({}) as Record<string, Model>,
+            ),
+          )
+          Object.assign(provider.models, discovered)
         }
 
         const gitlab = ProviderV2.ID.make("gitlab")

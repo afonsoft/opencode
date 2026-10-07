@@ -120,6 +120,7 @@ export const dict = {
   "ui.list.clearFilter": "Očisti filter",
   "ui.list.emptyWithFilter.prefix": "Nema rezultata za",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "još {{count}} — nastavite tipkati za filtriranje",
 
   "ui.messageNav.newMessage": "Nova poruka",
 

@@ -175,6 +175,13 @@
       }
     }
 
+    [data-slot="list-more"] {
+      padding: 6px 12px 10px;
+      color: var(--text-weak);
+      font-size: 12px;
+      line-height: var(--line-height-small);
+    }
+
     [data-slot="list-group"] {
       position: relative;
       display: flex;

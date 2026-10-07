@@ -105,6 +105,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Xóa bộ lọc",
   "ui.list.emptyWithFilter.prefix": "Không có kết quả cho",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "{{count}} nữa — tiếp tục nhập để lọc",
   "ui.fileSearch.placeholder": "Tìm",
   "ui.fileSearch.previousMatch": "Kết quả khớp trước",
   "ui.fileSearch.nextMatch": "Kết quả khớp tiếp theo",

@@ -14,6 +14,7 @@ export const popularProviders = [
   "google",
   "openrouter",
   "vercel",
+  "omniroute",
 ]
 const popularProviderSet = new Set(popularProviders)
 

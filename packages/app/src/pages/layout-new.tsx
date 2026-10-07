@@ -3,14 +3,25 @@ import { createStore } from "solid-js/store"
 import { DebugBar } from "@/components/debug-bar"
 import { TabsInfoPopup } from "@/components/help-button"
 import { Titlebar, type TitlebarUpdate } from "@/components/titlebar"
+import { useCommand } from "@/context/command"
+import { useLanguage } from "@/context/language"
 import { usePlatform } from "@/context/platform"
 import { setV2Toast, ToastRegion } from "@/utils/toast"
+import { useTheme } from "@opencode-ai/ui/theme/context"
+import { useThemeLanguageCommands } from "./layout/theme-language-commands"
 
 export default function NewLayout(props: ParentProps) {
   const platform = usePlatform()
+  const command = useCommand()
+  const theme = useTheme()
+  const language = useLanguage()
   const [state, setState] = createStore({ debugTools: true })
 
   createEffect(() => setV2Toast(true))
+
+  // mod+shift+t is bound to tab.reopenClosed in the new layout, so the theme
+  // commands register palette-only (no keybinds) here.
+  command.register("theme-language", useThemeLanguageCommands({ theme, language }))
 
   const update: TitlebarUpdate = {
     version: () => {

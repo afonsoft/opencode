@@ -1,4 +1,5 @@
 import type { AsyncStorage } from "@solid-primitives/storage"
+import { digestBlob } from "@opencode-ai/ui/digest"
 
 export type BlobReference = { id: string; url: string }
 
@@ -22,10 +23,7 @@ function blobUrl(id: string, blob: Blob) {
 }
 
 async function blobID(blob: Blob) {
-  const id = Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256", await blob.arrayBuffer())))
-    .map((byte) => byte.toString(16).padStart(2, "0"))
-    .join("")
-  return id
+  return digestBlob(blob)
 }
 
 export async function createBlobReference(blob: Blob): Promise<BlobReference> {

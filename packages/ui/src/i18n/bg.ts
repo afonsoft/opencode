@@ -105,6 +105,7 @@ export const dict = {
   "ui.list.clearFilter": "Изчистване на филтъра",
   "ui.list.emptyWithFilter.prefix": "Няма резултати за",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "Още {{count}} — продължете да пишете, за да филтрирате",
   "ui.fileSearch.placeholder": "Намерете",
   "ui.fileSearch.previousMatch": "Предишен мач",
   "ui.fileSearch.nextMatch": "Следващ мач",

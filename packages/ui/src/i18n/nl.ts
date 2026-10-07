@@ -105,6 +105,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Filter wissen",
   "ui.list.emptyWithFilter.prefix": "Geen resultaten voor",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "nog {{count}} — blijf typen om te filteren",
   "ui.fileSearch.placeholder": "Zoeken",
   "ui.fileSearch.previousMatch": "Vorige overeenkomst",
   "ui.fileSearch.nextMatch": "Volgende overeenkomst",

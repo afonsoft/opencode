@@ -105,6 +105,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Մաքրել զտիչը",
   "ui.list.emptyWithFilter.prefix": "Արդյունք չկա",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "ևս {{count}} — զտելու համար շարունակեք մուտքագրել",
   "ui.fileSearch.placeholder": "Գտնել",
   "ui.fileSearch.previousMatch": "Նախորդ համընկնում",
   "ui.fileSearch.nextMatch": "Հաջորդ համընկնում",

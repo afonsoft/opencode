@@ -110,6 +110,7 @@ export const dict = {
   "ui.list.clearFilter": "Ryd filter",
   "ui.list.emptyWithFilter.prefix": "Ingen resultater for",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "{{count}} flere — fortsæt med at skrive for at filtrere",
 
   "ui.messageNav.newMessage": "Ny besked",
 

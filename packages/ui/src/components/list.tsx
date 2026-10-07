@@ -1,10 +1,11 @@
 import { type FilteredListProps, useFilteredList } from "@opencode-ai/ui/hooks"
-import { createEffect, For, type JSX, on, Show } from "solid-js"
+import { createEffect, createMemo, For, type JSX, on, Show } from "solid-js"
 import { createStore } from "solid-js/store"
 import { makeEventListener } from "@solid-primitives/event-listener"
 import { useI18n } from "../context/i18n"
 import { Icon, type IconProps } from "./icon"
 import { IconButton } from "./icon-button"
+import { limitGroups } from "./list-limit"
 import { TextField } from "./text-field"
 
 function findByKey(container: HTMLElement, key: string) {
@@ -45,6 +46,8 @@ export interface ListProps<T> extends FilteredListProps<T> {
   search?: ListSearchProps | boolean
   itemWrapper?: (item: T, node: JSX.Element) => JSX.Element
   divider?: boolean
+  /** Cap on rendered items; filtering still sees the full item set. */
+  limit?: number
   add?: ListAddProps
   groupHeader?: (group: { category: string; items: T[] }) => JSX.Element
 }
@@ -88,6 +91,8 @@ export function List<T>(props: ListProps<T> & { ref?: (ref: ListRef) => void }) 
   }
 
   const { filter, grouped, flat, active, setActive, onKeyDown, onInput, refetch } = useFilteredList<T>(props)
+
+  const rendered = createMemo(() => limitGroups(grouped.latest, props.limit))
 
   const searchProps = () => (typeof props.search === "object" ? props.search : {})
   const searchAction = () => searchProps().action
@@ -324,7 +329,7 @@ export function List<T>(props: ListProps<T> & { ref?: (ref: ListRef) => void }) 
             </div>
           }
         >
-          <For each={grouped.latest}>
+          <For each={rendered().groups}>
             {(group, groupIndex) => {
               const isLastGroup = () => groupIndex() === grouped.latest.length - 1
               return (
@@ -386,6 +391,9 @@ export function List<T>(props: ListProps<T> & { ref?: (ref: ListRef) => void }) 
             <div data-slot="list-group">
               <div data-slot="list-items">{renderAdd()}</div>
             </div>
+          </Show>
+          <Show when={rendered().hidden > 0}>
+            <div data-slot="list-more">{i18n.t("ui.list.more", { count: String(rendered().hidden) })}</div>
           </Show>
         </Show>
       </div>

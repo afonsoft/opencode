@@ -106,6 +106,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "فلٹر صاف کریں۔",
   "ui.list.emptyWithFilter.prefix": "اس کے لیے کوئی نتیجہ نہیں ملا: ",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "{{count}} مزید — فلٹر کرنے کے لیے ٹائپ کرتے رہیں",
   "ui.fileSearch.placeholder": "تلاش کریں۔",
   "ui.fileSearch.previousMatch": "پچھلی مماثلت",
   "ui.fileSearch.nextMatch": "اگلی مماثلت",

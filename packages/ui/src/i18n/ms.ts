@@ -105,6 +105,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Kosongkan penapis",
   "ui.list.emptyWithFilter.prefix": "Tiada hasil untuk",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "{{count}} lagi — terus menaip untuk menapis",
   "ui.fileSearch.placeholder": "Cari",
   "ui.fileSearch.previousMatch": "Padanan sebelumnya",
   "ui.fileSearch.nextMatch": "Padanan seterusnya",

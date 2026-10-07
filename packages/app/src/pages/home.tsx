@@ -36,7 +36,16 @@ export function NewHome() {
           `}
         >
           <HomeProjects projects={projects} scroll={scroll} />
-          <HomeSessions sessions={sessions} search={search} scroll={scroll} />
+          <HomeSessions
+            sessions={sessions}
+            search={search}
+            scroll={scroll}
+            onAddProject={() => {
+              const conn = home.server.focused() ?? home.server.list()[0]
+              if (!conn) return
+              projects.project.choose(conn)
+            }}
+          />
           <HomeUtilityNav
             class="flex lg:hidden"
             onOpenSettings={projects.utility.settings}

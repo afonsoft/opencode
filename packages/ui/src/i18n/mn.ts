@@ -105,6 +105,7 @@ export const dict = {
   "ui.list.clearFilter": "Шүүлтүүрийг цэвэрлэх",
   "ui.list.emptyWithFilter.prefix": "-д илэрц байхгүй",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "дахиад {{count}} — шүүхийн тулд бичихээ үргэлжлүүлнэ үү",
   "ui.fileSearch.placeholder": "Хай",
   "ui.fileSearch.previousMatch": "Өмнөх тоглолт",
   "ui.fileSearch.nextMatch": "Дараагийн тоглолт",

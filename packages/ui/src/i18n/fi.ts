@@ -104,6 +104,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Tyhjennä suodatin",
   "ui.list.emptyWithFilter.prefix": "Ei tuloksia haulle",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "{{count}} lisää — jatka kirjoittamista suodattaaksesi",
   "ui.fileSearch.placeholder": "Etsi",
   "ui.fileSearch.previousMatch": "Edellinen osuma",
   "ui.fileSearch.nextMatch": "Seuraava osuma",
