@@ -105,6 +105,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Selge filter",
   "ui.list.emptyWithFilter.prefix": "Päringule pole tulemusi",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "veel {{count}} — filtreerimiseks jätkake tippimist",
   "ui.fileSearch.placeholder": "Otsi",
   "ui.fileSearch.previousMatch": "Eelmine vaste",
   "ui.fileSearch.nextMatch": "Järgmine vaste",

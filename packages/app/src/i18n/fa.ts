@@ -210,6 +210,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "مدل های رایگان ارائه شده توسط OpenCode",
   "dialog.model.unpaid.addMore.title": "مدل های بیشتری از ارائه دهندگان محبوب اضافه کنید",
   "dialog.model.unpaid.viewMoreProviders": "70+ ارائه‌دهنده دیگر را ببینید",
+  "dialog.model.more": "{{count}} مورد دیگر — برای فیلتر کردن به تایپ ادامه دهید",
   "dialog.provider.viewAll": "نمایش ارائه دهندگان بیشتر",
   "provider.connect.title": "{{provider}} را وصل کنید",
   "provider.connect.title.anthropicProMax": "با Claude Pro/Max وارد شوید",

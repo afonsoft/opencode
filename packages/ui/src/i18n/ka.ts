@@ -105,6 +105,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "ფილტრის გასუფთავება",
   "ui.list.emptyWithFilter.prefix": "შედეგები არ არის",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "კიდევ {{count}} — გასაფილტრად გააგრძელეთ წერა",
   "ui.fileSearch.placeholder": "მოძებნა",
   "ui.fileSearch.previousMatch": "წინა მატჩი",
   "ui.fileSearch.nextMatch": "შემდეგი მატჩი",

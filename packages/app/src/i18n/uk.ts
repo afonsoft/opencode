@@ -228,6 +228,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Безкоштовні моделі від OpenCode",
   "dialog.model.unpaid.addMore.title": "Додати більше моделей від популярних провайдерів",
   "dialog.model.unpaid.viewMoreProviders": "Переглянути ще понад 70 провайдерів",
+  "dialog.model.more": "ще {{count}} — продовжуйте вводити текст для фільтрування",
 
   "dialog.provider.viewAll": "Показати більше провайдерів",
 

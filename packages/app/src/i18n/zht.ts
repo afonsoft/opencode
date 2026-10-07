@@ -230,6 +230,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "OpenCode 提供的免費模型",
   "dialog.model.unpaid.addMore.title": "從熱門提供者新增更多模型",
   "dialog.model.unpaid.viewMoreProviders": "查看另外 70 多個提供者",
+  "dialog.model.more": " {{count}}  — ",
 
   "dialog.provider.viewAll": "查看更多提供者",
 

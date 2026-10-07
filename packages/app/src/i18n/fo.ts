@@ -209,6 +209,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Ókeypis modellir veitt av OpenCode",
   "dialog.model.unpaid.addMore.title": "Legg fleiri modellir til frá vælumtóktum veitarum",
   "dialog.model.unpaid.viewMoreProviders": "Sí 70+ fleiri veitarar",
+  "dialog.model.more": "{{count}} til viðbátar — halt fram at skriva fyri at filtrera",
   "dialog.provider.viewAll": "Vís fleiri veitarar",
   "provider.connect.title": "Samband {{provider}}",
   "provider.connect.title.anthropicProMax": "Rita inn við Claude Pro/Max",

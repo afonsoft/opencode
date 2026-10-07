@@ -211,6 +211,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Անվճար մոդելները տրամադրվում են OpenCode",
   "dialog.model.unpaid.addMore.title": "Ավելացնել ավելի շատ մոդելներ հանրաճանաչ մատակարարներից",
   "dialog.model.unpaid.viewMoreProviders": "Տես 70+ այլ մատակարարներ",
+  "dialog.model.more": "ևս {{count}} — զտելու համար շարունակեք մուտքագրել",
   "dialog.provider.viewAll": "Ցույց տալ ավելի շատ մատակարարներ",
   "provider.connect.title": "Միացեք {{provider}}",
   "provider.connect.title.anthropicProMax": "Մուտք գործեք Claude Pro/Max-ով",

@@ -213,6 +213,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Besplatne modele nudi OpenCode",
   "dialog.model.unpaid.addMore.title": "Dodajte još modela popularnih dobavljača",
   "dialog.model.unpaid.viewMoreProviders": "Pogledajte više od 70 pružatelja usluga",
+  "dialog.model.more": "još {{count}} — nastavite tipkati za filtriranje",
   "dialog.provider.viewAll": "Prikaži više pružatelja usluga",
   "provider.connect.title": "Povežite {{provider}}",
   "provider.connect.title.anthropicProMax": "Prijavite se sa Claude Pro/Max",

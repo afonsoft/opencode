@@ -213,6 +213,7 @@ export const dict: Record<string, string> = {
   "dialog.model.unpaid.freeModels.title": "OpenCodeགིས་བྱིན་མི་རིན་མེད་དཔེ་ཚད་ཚུ།",
   "dialog.model.unpaid.addMore.title": "ཡོངས་གྲགས་ཅན་གྱི་བྱིན་མི་ཚུ་ལས་ དཔེ་ཚད་མངམ་ཁ་སྐོང་བརྐྱབ།",
   "dialog.model.unpaid.viewMoreProviders": "70+ མཁོ་སྤྲོད་འབད་མི་ཚུ་བལྟ།",
+  "dialog.model.more": "{{count}} ལྷག — ཚག་མ་འབད་ནིའི་དོན་ལུ་འབྲི་མུར་འཇུག",
   "dialog.provider.viewAll": "བྱིན་མི་མངམ་སྟོན།",
   "provider.connect.title": "{{provider}}མཐུད།",
   "provider.connect.title.anthropicProMax": "Claude Pro/Max དང་ཅིག་ཁར་ནང་བསྐྱོན།",

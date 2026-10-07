@@ -209,6 +209,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Bezmaksas modeļi no OpenCode",
   "dialog.model.unpaid.addMore.title": "Pievienot vairāk modeļu no populāriem nodrošinātājiem",
   "dialog.model.unpaid.viewMoreProviders": "Skatīt vēl 70+ nodrošinātājus",
+  "dialog.model.more": "vēl {{count}} — turpiniet rakstīt, lai filtrētu",
   "dialog.provider.viewAll": "Rādīt vairāk nodrošinātāju",
   "provider.connect.title": "Savienot {{provider}}",
   "provider.connect.title.anthropicProMax": "Pieteikties ar Claude Pro/Max",

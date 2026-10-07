@@ -104,6 +104,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "ማጣሪያን አጽዳ",
   "ui.list.emptyWithFilter.prefix": "ምንም ውጤቶች ለ",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "{{count}} ተጨማሪ — ለማጣራት መተየብ ይቀጥሉ",
   "ui.fileSearch.placeholder": "አግኝ",
   "ui.fileSearch.previousMatch": "የቀድሞ ግጥሚያ",
   "ui.fileSearch.nextMatch": "ቀጣይ ተዛማጅ",

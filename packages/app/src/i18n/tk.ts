@@ -210,6 +210,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "OpenCode tarapyndan mugt modeller",
   "dialog.model.unpaid.addMore.title": "Meşhur üpjün edijilerden has köp model goşuň",
   "dialog.model.unpaid.viewMoreProviders": "Moreene-de 70+ üpjün edijä serediň",
+  "dialog.model.more": "ýene {{count}} — süzmek üçin ýazmaga dowam ediň",
   "dialog.provider.viewAll": "Has köp üpjün edijini görkeziň",
   "provider.connect.title": "{{provider}} birikdiriň",
   "provider.connect.title.anthropicProMax": "Claude Pro / Maks bilen giriň",

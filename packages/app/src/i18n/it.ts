@@ -118,6 +118,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Modelli gratuiti forniti da OpenCode",
   "dialog.model.unpaid.addMore.title": "Aggiungi altri modelli dai provider più diffusi",
   "dialog.model.unpaid.viewMoreProviders": "Scopri oltre 70 provider",
+  "dialog.model.more": "altri {{count}} — continua a digitare per filtrare",
   "dialog.provider.viewAll": "Mostra altri provider",
   "provider.connect.title": "Connetti {{provider}}",
   "provider.connect.title.anthropicProMax": "Accedi con Claude Pro/Max",

@@ -213,6 +213,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Nemokami OpenCode modeliai",
   "dialog.model.unpaid.addMore.title": "Pridėkite daugiau populiarių tiekėjų modelių",
   "dialog.model.unpaid.viewMoreProviders": "Žr. daugiau nei 70 tiekėjų",
+  "dialog.model.more": "dar {{count}} — tęskite rašymą, kad filtruotumėte",
   "dialog.provider.viewAll": "Rodyti daugiau teikėjų",
   "provider.connect.title": "Prijunkite {{provider}}",
   "provider.connect.title.anthropicProMax": "Prisijunkite naudodami Claude Pro/Max",

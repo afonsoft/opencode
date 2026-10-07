@@ -105,6 +105,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "පෙරහන හිස් කරන්න",
   "ui.list.emptyWithFilter.prefix": "සඳහා ප්‍රතිඵල නැත",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "තවත් {{count}} — පෙරහන් කිරීමට ලිවීම දිගටම කරගෙන යන්න",
   "ui.fileSearch.placeholder": "සොයන්න",
   "ui.fileSearch.previousMatch": "පෙර තරගය",
   "ui.fileSearch.nextMatch": "ඊළඟ තරගය",

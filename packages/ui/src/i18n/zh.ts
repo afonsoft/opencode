@@ -114,6 +114,7 @@ export const dict = {
   "ui.list.clearFilter": "清除筛选",
   "ui.list.emptyWithFilter.prefix": "没有关于",
   "ui.list.emptyWithFilter.suffix": "的结果",
+  "ui.list.more": " {{count}}  — ",
 
   "ui.messageNav.newMessage": "新消息",
 

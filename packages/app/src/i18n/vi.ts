@@ -217,6 +217,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Các mô hình miễn phí do OpenCode cung cấp",
   "dialog.model.unpaid.addMore.title": "Thêm nhiều mô hình từ các nhà cung cấp phổ biến",
   "dialog.model.unpaid.viewMoreProviders": "Xem hơn 70 nhà cung cấp khác",
+  "dialog.model.more": "{{count}} nữa — tiếp tục nhập để lọc",
   "dialog.provider.viewAll": "Hiển thị thêm nhà cung cấp",
   "provider.connect.title": "Kết nối {{provider}}",
   "provider.connect.title.anthropicProMax": "Đăng nhập bằng Claude Pro/Max",

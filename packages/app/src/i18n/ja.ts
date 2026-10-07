@@ -216,6 +216,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "OpenCodeが提供する無料モデル",
   "dialog.model.unpaid.addMore.title": "人気のプロバイダーからモデルを追加",
   "dialog.model.unpaid.viewMoreProviders": "その他70以上のプロバイダーを見る",
+  "dialog.model.more": "り {{count}}  — をけてりみ",
   "dialog.provider.viewAll": "さらにプロバイダーを表示",
   "provider.connect.title": "{{provider}}を接続",
   "provider.connect.title.anthropicProMax": "Claude Pro/Maxでログイン",

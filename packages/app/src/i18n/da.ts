@@ -127,6 +127,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Gratis modeller leveret af OpenCode",
   "dialog.model.unpaid.addMore.title": "Tilføj flere modeller fra populære udbydere",
   "dialog.model.unpaid.viewMoreProviders": "Se mere end 70 yderligere udbydere",
+  "dialog.model.more": "{{count}} flere — fortsæt med at skrive for at filtrere",
 
   "dialog.provider.viewAll": "Vis flere udbydere",
 

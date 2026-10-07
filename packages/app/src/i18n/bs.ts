@@ -228,6 +228,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Besplatni modeli koje obezbjeđuje OpenCode",
   "dialog.model.unpaid.addMore.title": "Dodaj još modela od popularnih provajdera",
   "dialog.model.unpaid.viewMoreProviders": "Pogledaj još više od 70 provajdera",
+  "dialog.model.more": "još {{count}} — nastavite tipkati za filtriranje",
 
   "dialog.provider.viewAll": "Prikaži više provajdera",
 

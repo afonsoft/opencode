@@ -113,6 +113,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "OpenCode에서 제공하는 무료 모델",
   "dialog.model.unpaid.addMore.title": "인기 공급자의 모델 추가",
   "dialog.model.unpaid.viewMoreProviders": "70개 이상의 공급자 더 보기",
+  "dialog.model.more": "{{count}}개 더 — 입력을 계속해 필터링하세요",
   "dialog.provider.viewAll": "더 많은 공급자 보기",
   "provider.connect.title": "{{provider}} 연결",
   "provider.connect.title.anthropicProMax": "Claude Pro/Max로 로그인",

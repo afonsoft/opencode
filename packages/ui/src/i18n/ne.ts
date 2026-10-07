@@ -107,6 +107,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "फिल्टर खाली गर्नुहोस्",
   "ui.list.emptyWithFilter.prefix": "को लागि कुनै परिणाम छैन",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "अरू {{count}} — फिल्टर गर्न टाइप गर्ने क्रम जारी राख्नुहोस्",
   "ui.fileSearch.placeholder": "फेला पार्नुहोस्",
   "ui.fileSearch.previousMatch": "अघिल्लो खेल",
   "ui.fileSearch.nextMatch": "अर्को खेल",

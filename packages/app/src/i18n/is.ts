@@ -213,6 +213,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Ókeypis gerðir frá OpenCode",
   "dialog.model.unpaid.addMore.title": "Bættu við fleiri gerðum frá vinsælum veitendum",
   "dialog.model.unpaid.viewMoreProviders": "Sjáðu 70+ þjónustuveitendur í viðbót",
+  "dialog.model.more": "{{count}} til viðbótar — haltu áfram að skrifa til að sía",
   "dialog.provider.viewAll": "Sýna fleiri veitendur",
   "provider.connect.title": "Tengdu {{provider}}",
   "provider.connect.title.anthropicProMax": "Skráðu þig inn með Claude Pro/Max",

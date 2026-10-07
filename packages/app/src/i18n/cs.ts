@@ -209,6 +209,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Bezplatné modely poskytované OpenCode",
   "dialog.model.unpaid.addMore.title": "Přidejte další modely od oblíbených poskytovatelů",
   "dialog.model.unpaid.viewMoreProviders": "Zobrazit více než 70 dalších poskytovatelů",
+  "dialog.model.more": "dalších {{count}} — pro filtrování pokračujte v psaní",
   "dialog.provider.viewAll": "Zobrazit další poskytovatele",
   "provider.connect.title": "Připojit {{provider}}",
   "provider.connect.title.anthropicProMax": "Přihlaste se pomocí Claude Pro/Max",

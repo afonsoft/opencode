@@ -209,6 +209,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "უფასო მოდელები მოწოდებულია OpenCode",
   "dialog.model.unpaid.addMore.title": "დაამატე მეტი მოდელები პოპულარული პროვაიდერებისგან",
   "dialog.model.unpaid.viewMoreProviders": "იხილეთ 70+ სხვა პროვაიდერი",
+  "dialog.model.more": "კიდევ {{count}} — გასაფილტრად გააგრძელეთ წერა",
   "dialog.provider.viewAll": "აჩვენე მეტი პროვაიდერი",
   "provider.connect.title": "დაკავშირება {{provider}}",
   "provider.connect.title.anthropicProMax": "შესვლა Claude Pro/Max-ით",

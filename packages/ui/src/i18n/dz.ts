@@ -107,6 +107,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "ཚགས་མ་བསལ།",
   "ui.list.emptyWithFilter.prefix": "2019 ལོའི་གྲུབ་འབྲས་མེད།",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "{{count}} ལྷག — ཚག་མ་འབད་ནིའི་དོན་ལུ་འབྲི་མུར་འཇུག",
   "ui.fileSearch.placeholder": "འཚོལ་ནི",
   "ui.fileSearch.previousMatch": "ཧེ་མའི་རྩེད་འགྲན་འདི།",
   "ui.fileSearch.nextMatch": "རྩེད་འགྲན་ཤུལ་མམ།",

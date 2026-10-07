@@ -107,6 +107,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Szűrő törlése",
   "ui.list.emptyWithFilter.prefix": "Nincs találat a következőre",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "további {{count}} — a szűréshez folytassa a gépelést",
   "ui.fileSearch.placeholder": "Keresés",
   "ui.fileSearch.previousMatch": "Előző találat",
   "ui.fileSearch.nextMatch": "Következő találat",

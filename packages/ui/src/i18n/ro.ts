@@ -109,6 +109,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Șterge filtrul",
   "ui.list.emptyWithFilter.prefix": "Niciun rezultat pentru",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "încă {{count}} — continuați să tastați pentru a filtra",
   "ui.fileSearch.placeholder": "Caută",
   "ui.fileSearch.previousMatch": "Potrivirea anterioară",
   "ui.fileSearch.nextMatch": "Potrivirea următoare",

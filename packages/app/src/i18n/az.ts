@@ -212,6 +212,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "OpenCode tərəfindən təqdim olunan pulsuz modellər",
   "dialog.model.unpaid.addMore.title": "Populyar provayderlərdən daha çox model əlavə edin",
   "dialog.model.unpaid.viewMoreProviders": "Daha 70+ provayderə baxın",
+  "dialog.model.more": "{{count}} daha — filtrləmək üçün yazmağa davam edin",
   "dialog.provider.viewAll": "Daha çox provayder göstər",
   "provider.connect.title": "{{provider}} provayderini qoş",
   "provider.connect.title.anthropicProMax": "Claude Pro/Max ilə daxil ol",

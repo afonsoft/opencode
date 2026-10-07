@@ -209,6 +209,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "ម៉ូដែលឥតគិតថ្លៃដែលផ្តល់ដោយ OpenCode",
   "dialog.model.unpaid.addMore.title": "បន្ថែមម៉ូដែលជាច្រើនទៀតពីអ្នកផ្តល់សេវាពេញនិយម",
   "dialog.model.unpaid.viewMoreProviders": "មើលអ្នកផ្តល់សេវា 70+ ទៀត។",
+  "dialog.model.more": "បន្ថែម {{count}} ទៀត — បន្តវាយដើម្បីតម្រង",
   "dialog.provider.viewAll": "បង្ហាញអ្នកផ្តល់សេវាបន្ថែម",
   "provider.connect.title": "ភ្ជាប់ {{provider}}",
   "provider.connect.title.anthropicProMax": "ចូលដោយប្រើ Claude Pro/Max",

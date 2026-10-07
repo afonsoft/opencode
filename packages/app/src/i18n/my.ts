@@ -211,6 +211,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "OpenCode မှ ပံ့ပိုးပေးသော အခမဲ့မော်ဒယ်များ",
   "dialog.model.unpaid.addMore.title": "လူကြိုက်များသော ဝန်ဆောင်မှုပေးသူများထံမှ နောက်ထပ်မော်ဒယ်များကို ထည့်ပါ။",
   "dialog.model.unpaid.viewMoreProviders": "နောက်ထပ်ပံ့ပိုးပေးသူ 70+ ကိုကြည့်ပါ။",
+  "dialog.model.more": "နောက်ထပ် {{count}} ခု — စစ်ထုတ်ရန် ရိုက်နေဆဲဖြစ်ပါ",
   "dialog.provider.viewAll": "နောက်ထပ်ဝန်ဆောင်မှုပေးသူများကို ပြပါ။",
   "provider.connect.title": "{{provider}} ကို ချိတ်ဆက်ပါ။",
   "provider.connect.title.anthropicProMax": "Claude Pro/Max ဖြင့် ဝင်ရောက်ပါ။",

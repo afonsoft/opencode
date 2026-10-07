@@ -210,6 +210,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Моделҳои ройгон аз ҷониби OpenCode пешниҳодшуда",
   "dialog.model.unpaid.addMore.title": "Моделҳои бештар аз провайдерҳои маъмул илова кунед",
   "dialog.model.unpaid.viewMoreProviders": "Ба 70+ провайдерҳои дигар нигаред",
+  "dialog.model.more": "боз {{count}} — барои филтр кардан навиштанро давом диҳед",
   "dialog.provider.viewAll": "Провайдерҳои бештарро нишон диҳед",
   "provider.connect.title": "Пайвастшавӣ {{provider}}",
   "provider.connect.title.anthropicProMax": "Воридшавӣ бо Claude Pro/Max",

@@ -112,6 +112,7 @@ export const dict = {
   "ui.list.clearFilter": "ล้างตัวกรอง",
   "ui.list.emptyWithFilter.prefix": "ไม่มีผลลัพธ์สำหรับ",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "อีก {{count}} รายการ — พิมพ์ต่อเพื่อกรอง",
 
   "ui.messageNav.newMessage": "ข้อความใหม่",
 

@@ -209,6 +209,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "ነጻ ሞዴሎች በOpenCode",
   "dialog.model.unpaid.addMore.title": "ተጨማሪ ሞዴሎችን ከታዋቂ አቅራቢዎች ያክሉ",
   "dialog.model.unpaid.viewMoreProviders": "ከ70+ በላይ አቅራቢዎችን ይመልከቱ",
+  "dialog.model.more": "{{count}} ተጨማሪ — ለማጣራት መተየብ ይቀጥሉ",
   "dialog.provider.viewAll": "ተጨማሪ አቅራቢዎችን አሳይ",
   "provider.connect.title": "{{provider}} አገናኝ",
   "provider.connect.title.anthropicProMax": "በClaude Pro/Max ይግቡ",

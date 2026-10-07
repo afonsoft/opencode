@@ -119,6 +119,7 @@ export const dict = {
   "ui.list.clearFilter": "Очистить фильтр",
   "ui.list.emptyWithFilter.prefix": "Нет результатов для",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "ещё {{count}} — продолжайте вводить текст для фильтрации",
 
   "ui.messageNav.newMessage": "Новое сообщение",
 

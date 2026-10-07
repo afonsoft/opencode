@@ -252,6 +252,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "OpenCode 提供的免费模型",
   "dialog.model.unpaid.addMore.title": "从热门提供商添加更多模型",
   "dialog.model.unpaid.viewMoreProviders": "查看另外 70 多个提供商",
+  "dialog.model.more": " {{count}}  — ",
 
   "dialog.provider.viewAll": "查看更多提供商",
 

@@ -105,6 +105,7 @@ export const dict = {
   "ui.list.clearFilter": "ລ້າງການກັ່ນຕອງ",
   "ui.list.emptyWithFilter.prefix": "ບໍ່ມີຜົນໄດ້ຮັບສໍາລັບ",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "ອີກ {{count}} — ສືບຕໍ່ພິມເພື່ອກັ່ນຕອງ",
   "ui.fileSearch.placeholder": "ຊອກຫາ",
   "ui.fileSearch.previousMatch": "ການແຂ່ງຂັນທີ່ຜ່ານມາ",
   "ui.fileSearch.nextMatch": "ການແຂ່ງຂັນຕໍ່ໄປ",

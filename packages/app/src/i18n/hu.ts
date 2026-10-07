@@ -213,6 +213,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "A OpenCode ingyenes modelljei",
   "dialog.model.unpaid.addMore.title": "Adjon hozzá további modelleket a népszerű szolgáltatóktól",
   "dialog.model.unpaid.viewMoreProviders": "További 70+ szolgáltató megtekintése",
+  "dialog.model.more": "további {{count}} — a szűréshez folytassa a gépelést",
   "dialog.provider.viewAll": "További szolgáltatók megjelenítése",
   "provider.connect.title": "Csatlakoztassa a {{provider}}-t",
   "provider.connect.title.anthropicProMax": "Jelentkezzen be a Claude Pro/Max",

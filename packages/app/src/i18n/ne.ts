@@ -210,6 +210,7 @@ export const dict: Record<string, string> = {
   "dialog.model.unpaid.freeModels.title": "OpenCode द्वारा प्रदान गरिएको नि:शुल्क मोडेलहरू",
   "dialog.model.unpaid.addMore.title": "लोकप्रिय प्रदायकहरूबाट थप मोडेलहरू थप्नुहोस्",
   "dialog.model.unpaid.viewMoreProviders": "70+ थप प्रदायकहरू हेर्नुहोस्",
+  "dialog.model.more": "अरू {{count}} — फिल्टर गर्न टाइप गर्ने क्रम जारी राख्नुहोस्",
   "dialog.provider.viewAll": "थप प्रदायकहरू देखाउनुहोस्",
   "provider.connect.title": "जडान गर्नुहोस् {{provider}}",
   "provider.connect.title.anthropicProMax": "Claude Pro/Max सँग लगइन गर्नुहोस्",

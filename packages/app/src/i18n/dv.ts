@@ -213,6 +213,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "ހިލޭ މޮޑެލްތައް ފޯރުކޮށްދެނީ OpenCode އިންނެވެ",
   "dialog.model.unpaid.addMore.title": "މަޝްހޫރު ޕްރޮވައިޑަރުންގެ އިތުރު މޮޑެލްތައް އިތުރުކުރުން",
   "dialog.model.unpaid.viewMoreProviders": "އިތުރު 70+ ޕްރޮވައިޑަރުން ބައްލަވާށެވެ",
+  "dialog.model.more": "{{count}} އިތުރު — ފިލްޓަރ ކުރުމަށް ލިޔުމަށް ކުރިއަށް ގެންދާ",
   "dialog.provider.viewAll": "އިތުރު ޕްރޮވައިޑަރުން ދައްކާށެވެ",
   "provider.connect.title": "{{provider}} ގުޅުވާށެވެ",
   "provider.connect.title.anthropicProMax": "Claude ޕްރޯ/މެކްސް އިން ލޮގިން ވާނެއެވެ",

@@ -117,6 +117,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "OpenCoden tarjoamat ilmaiset mallit",
   "dialog.model.unpaid.addMore.title": "Lisää malleja suosituilta palveluntarjoajilta",
   "dialog.model.unpaid.viewMoreProviders": "Katso yli 70 muuta palveluntarjoajaa",
+  "dialog.model.more": "{{count}} lisää — jatka kirjoittamista suodattaaksesi",
   "dialog.provider.viewAll": "Näytä lisää palveluntarjoajia",
   "provider.connect.title": "Yhdistä {{provider}}",
   "provider.connect.title.anthropicProMax": "Kirjaudu sisään Claude Pro/Maxilla",

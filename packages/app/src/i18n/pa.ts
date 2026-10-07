@@ -216,6 +216,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "OpenCode دے ذریعہ فراہم کردہ مفت ماڈل",
   "dialog.model.unpaid.addMore.title": "مقبول پرووائیڈراں توں ہور ماڈل شامل کرو",
   "dialog.model.unpaid.viewMoreProviders": "70+ ہور پرووائیڈر ویکھو",
+  "dialog.model.more": "ਹੋਰ {{count}} — ਫਿਲਟਰ ਕਰਨ ਲਈ ਟਾਈਪ ਕਰਨਾ ਜਾਰੀ ਰੱਖੋ",
   "dialog.provider.viewAll": "ہور پرووائیڈر وکھاؤ",
   "provider.connect.title": "{{provider}} نال جڑو",
   "provider.connect.title.anthropicProMax": "Claude پرو/میکس دے نال لاگ ان کرو",

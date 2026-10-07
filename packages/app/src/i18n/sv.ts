@@ -211,6 +211,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Gratis modeller tillhandahålls av OpenCode",
   "dialog.model.unpaid.addMore.title": "Lägg till fler modeller från populära leverantörer",
   "dialog.model.unpaid.viewMoreProviders": "Se fler än 70 leverantörer",
+  "dialog.model.more": "{{count}} till — fortsätt skriva för att filtrera",
   "dialog.provider.viewAll": "Visa fler leverantörer",
   "provider.connect.title": "Anslut {{provider}}",
   "provider.connect.title.anthropicProMax": "Logga in med Claude Pro/Max",

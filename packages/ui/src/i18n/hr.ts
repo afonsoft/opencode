@@ -110,6 +110,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Očisti filter",
   "ui.list.emptyWithFilter.prefix": "Nema rezultata za",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "još {{count}} — nastavite tipkati za filtriranje",
   "ui.fileSearch.placeholder": "Pronaći",
   "ui.fileSearch.previousMatch": "Prethodno podudaranje",
   "ui.fileSearch.nextMatch": "Sljedeće podudaranje",

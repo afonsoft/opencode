@@ -110,6 +110,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Cancella filtro",
   "ui.list.emptyWithFilter.prefix": "Nessun risultato per",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "altri {{count}} — continua a digitare per filtrare",
   "ui.fileSearch.placeholder": "Cerca",
   "ui.fileSearch.previousMatch": "Corrispondenza precedente",
   "ui.fileSearch.nextMatch": "Corrispondenza successiva",

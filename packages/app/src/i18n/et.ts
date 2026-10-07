@@ -209,6 +209,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Tasuta mudeleid pakub OpenCode",
   "dialog.model.unpaid.addMore.title": "Lisage populaarsete pakkujate mudeleid",
   "dialog.model.unpaid.viewMoreProviders": "Vaadake veel 70+ pakkujat",
+  "dialog.model.more": "veel {{count}} — filtreerimiseks jätkake tippimist",
   "dialog.provider.viewAll": "Kuva rohkem teenusepakkujaid",
   "provider.connect.title": "Ühenda {{provider}}",
   "provider.connect.title.anthropicProMax": "Logi sisse Claude Pro/Max",

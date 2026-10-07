@@ -216,6 +216,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "نماذج مجانية مقدمة من OpenCode",
   "dialog.model.unpaid.addMore.title": "إضافة المزيد من النماذج من موفرين مشهورين",
   "dialog.model.unpaid.viewMoreProviders": "عرض أكثر من 70 موفرًا إضافيًا",
+  "dialog.model.more": "{{count}} أخرى — استمر في الكتابة للتصفية",
   "dialog.provider.viewAll": "عرض المزيد من الموفرين",
   "provider.connect.title": "الاتصال بـ {{provider}}",
   "provider.connect.title.anthropicProMax": "تسجيل الدخول باستخدام Claude Pro/Max",

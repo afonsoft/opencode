@@ -113,6 +113,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Išvalyti filtrą",
   "ui.list.emptyWithFilter.prefix": "Nėra rezultatų pagal",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "dar {{count}} — tęskite rašymą, kad filtruotumėte",
   "ui.fileSearch.placeholder": "Rasti",
   "ui.fileSearch.previousMatch": "Ankstesnis atitikmuo",
   "ui.fileSearch.nextMatch": "Kitas atitikmuo",

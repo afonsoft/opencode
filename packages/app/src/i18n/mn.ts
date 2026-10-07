@@ -212,6 +212,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "OpenCode өгсөн үнэгүй загварууд",
   "dialog.model.unpaid.addMore.title": "Алдартай үйлчилгээ үзүүлэгчээс илүү олон загварыг нэмнэ үү",
   "dialog.model.unpaid.viewMoreProviders": "Өөр 70 гаруй үйлчилгээ үзүүлэгчийг харна уу",
+  "dialog.model.more": "дахиад {{count}} — шүүхийн тулд бичихээ үргэлжлүүлнэ үү",
   "dialog.provider.viewAll": "Илүү олон үйлчилгээ үзүүлэгчийг харуулах",
   "provider.connect.title": "Холбох {{provider}}",
   "provider.connect.title.anthropicProMax": "Claude Pro/Max-аар нэвтэрнэ үү",

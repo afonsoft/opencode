@@ -122,6 +122,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Очистити фільтр",
   "ui.list.emptyWithFilter.prefix": "Немає результатів для",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "ще {{count}} — продовжуйте вводити текст для фільтрування",
 
   "ui.fileSearch.placeholder": "Знайти",
   "ui.fileSearch.previousMatch": "Попередній збіг",

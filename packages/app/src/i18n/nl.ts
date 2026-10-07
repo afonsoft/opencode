@@ -210,6 +210,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Gratis modellen geleverd door OpenCode",
   "dialog.model.unpaid.addMore.title": "Voeg meer modellen toe van populaire aanbieders",
   "dialog.model.unpaid.viewMoreProviders": "Bekijk nog 70+ aanbieders",
+  "dialog.model.more": "nog {{count}} — blijf typen om te filteren",
   "dialog.provider.viewAll": "Toon meer aanbieders",
   "provider.connect.title": "Verbinding maken met {{provider}}",
   "provider.connect.title.anthropicProMax": "Inloggen met Claude Pro/Max",

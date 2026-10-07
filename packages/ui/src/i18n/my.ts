@@ -106,6 +106,7 @@ export const dict = {
   "ui.list.clearFilter": "စစ်ထုတ်မှုကို ရှင်းလင်းပါ။",
   "ui.list.emptyWithFilter.prefix": "အတွက် ရလဒ်များ မရှိပါ။",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "နောက်ထပ် {{count}} ခု — စစ်ထုတ်ရန် ရိုက်နေဆဲဖြစ်ပါ",
   "ui.fileSearch.placeholder": "ရှာပါ။",
   "ui.fileSearch.previousMatch": "ယခင်ပွဲ",
   "ui.fileSearch.nextMatch": "နောက်ပွဲ",

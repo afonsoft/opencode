@@ -105,6 +105,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Pastro filtrin",
   "ui.list.emptyWithFilter.prefix": "Nuk ka rezultate për",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "edhe {{count}} — vazhdoni të shkruani për të filtruar",
   "ui.fileSearch.placeholder": "Gjeni",
   "ui.fileSearch.previousMatch": "Ndeshja e mëparshme",
   "ui.fileSearch.nextMatch": "Ndeshja e radhës",

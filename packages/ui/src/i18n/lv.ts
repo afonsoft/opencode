@@ -109,6 +109,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Notīrīt filtru",
   "ui.list.emptyWithFilter.prefix": "Nav rezultātu vaicājumam",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "vēl {{count}} — turpiniet rakstīt, lai filtrētu",
   "ui.fileSearch.placeholder": "Meklēt",
   "ui.fileSearch.previousMatch": "Iepriekšējā atbilstība",
   "ui.fileSearch.nextMatch": "Nākamā atbilstība",

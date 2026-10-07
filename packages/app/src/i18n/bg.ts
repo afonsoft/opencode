@@ -212,6 +212,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Безплатни модели, предоставени от OpenCode",
   "dialog.model.unpaid.addMore.title": "Добавете още модели от популярни доставчици",
   "dialog.model.unpaid.viewMoreProviders": "Вижте още 70+ доставчици",
+  "dialog.model.more": "Още {{count}} — продължете да пишете, за да филтрирате",
   "dialog.provider.viewAll": "Показване на още доставчици",
   "provider.connect.title": "Свържете {{provider}}",
   "provider.connect.title.anthropicProMax": "Влезте с Claude Pro/Max",

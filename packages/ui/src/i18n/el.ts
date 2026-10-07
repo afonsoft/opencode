@@ -105,6 +105,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Διαγραφή φίλτρου",
   "ui.list.emptyWithFilter.prefix": "Δεν υπάρχουν αποτελέσματα για",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "{{count}} ακόμη — συνεχίστε να πληκτρολογείτε για φιλτράρισμα",
   "ui.fileSearch.placeholder": "Εύρεση",
   "ui.fileSearch.previousMatch": "Προηγούμενη αντιστοίχιση",
   "ui.fileSearch.nextMatch": "Επόμενος αγώνας",

@@ -209,6 +209,7 @@ export const dict = {
   "dialog.model.unpaid.freeModels.title": "Model percuma yang disediakan oleh OpenCode",
   "dialog.model.unpaid.addMore.title": "Tambah lebih banyak model daripada penyedia popular",
   "dialog.model.unpaid.viewMoreProviders": "Lihat 70+ lagi penyedia",
+  "dialog.model.more": "{{count}} lagi — terus menaip untuk menapis",
   "dialog.provider.viewAll": "Tunjukkan lebih banyak penyedia",
   "provider.connect.title": "Sambungkan {{provider}}",
   "provider.connect.title.anthropicProMax": "Log masuk dengan Claude Pro/Max",

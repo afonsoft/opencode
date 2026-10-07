@@ -105,6 +105,7 @@ export const dict: Record<string, string> = {
   "ui.list.clearFilter": "Süzgüçi arassalaň",
   "ui.list.emptyWithFilter.prefix": "Netije ýok",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "ýene {{count}} — süzmek üçin ýazmaga dowam ediň",
   "ui.fileSearch.placeholder": "Tap",
   "ui.fileSearch.previousMatch": "Öňki oýun",
   "ui.fileSearch.nextMatch": "Indiki oýun",

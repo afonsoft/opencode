@@ -111,6 +111,7 @@ export const dict = {
   "ui.list.clearFilter": "フィルターをクリア",
   "ui.list.emptyWithFilter.prefix": "次の検索結果はありません: ",
   "ui.list.emptyWithFilter.suffix": "",
+  "ui.list.more": "あと {{count}}  — をけてフィルタ",
 
   "ui.messageNav.newMessage": "新しいメッセージ",
 
