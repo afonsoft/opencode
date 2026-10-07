@@ -207,6 +207,12 @@ export const dict = {
   "provider.custom.error.baseURL.format": "Must start with http:// or https://",
   "provider.custom.error.required": "Required",
   "provider.custom.error.duplicate": "Duplicate",
+  "provider.omniroute.title": "OmniRoute / 9router",
+  "provider.omniroute.description":
+    "Connect an OmniRoute or 9router gateway. Models are discovered automatically from the endpoint.",
+  "provider.omniroute.field.baseURL.placeholder": "https://omniroute.example.com/v1",
+  "dialog.provider.omniroute.label": "OmniRoute / 9router",
+  "settings.providers.omniroute.description": "OpenAI-compatible gateway. Set the endpoint and API key only.",
 
   "provider.disconnect.toast.disconnected.title": "{{provider}} disconnected",
   "provider.disconnect.toast.disconnected.description": "{{provider}} models are no longer available.",
@@ -943,6 +949,17 @@ export const dict = {
   "settings.general.row.showCustomAgents.title": "Show agent",
   "settings.general.row.showCustomAgents.description":
     "Switch between agents in the composer. When hidden, defaults to Build agent.",
+  "settings.general.row.showSessionReview.title": "Session review button",
+  "settings.general.row.showSessionReview.description": "Show the review (changes) button in the session toolbar",
+  "settings.general.row.showSessionFiles.title": "Session files button",
+  "settings.general.row.showSessionFiles.description": "Show the files browser button in the session toolbar",
+  "settings.general.row.showSessionTerminal.title": "Session terminal button",
+  "settings.general.row.showSessionTerminal.description": "Show the terminal button in the session toolbar",
+  "settings.general.row.showSessionTasks.title": "Session tasks button",
+  "settings.general.row.showSessionTasks.description": "Show the todo tasks button in the session toolbar",
+  "settings.general.row.showSessionProgress.title": "Session progress button",
+  "settings.general.row.showSessionProgress.description":
+    "Show the session progress (context) button in the session toolbar",
   "settings.general.row.reasoningSummaries.title": "Show reasoning summaries",
   "settings.general.row.reasoningSummaries.description": "Display model reasoning summaries in the timeline",
   "settings.general.row.shellToolPartsExpanded.title": "Expand shell tool parts",

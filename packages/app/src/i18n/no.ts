@@ -304,6 +304,11 @@ export const dict = {
   "provider.custom.error.baseURL.format": "Må starte med http:// eller https://",
   "provider.custom.error.required": "Påkrevd",
   "provider.custom.error.duplicate": "Duplikat",
+  "provider.omniroute.title": "OmniRoute / 9router",
+  "provider.omniroute.description": "Koble til en OmniRoute- eller 9router-gateway. Modeller hentes automatisk fra endepunktet.",
+  "provider.omniroute.field.baseURL.placeholder": "https://omniroute.example.com/v1",
+  "dialog.provider.omniroute.label": "OmniRoute / 9router",
+  "settings.providers.omniroute.description": "OpenAI-kompatibel gateway. Sett kun endepunkt og API-nøkkel.",
 
   "provider.disconnect.toast.disconnected.title": "{{provider}} frakoblet",
   "provider.disconnect.toast.disconnected.description": "Modeller fra {{provider}} er ikke lenger tilgjengelige.",
@@ -1253,6 +1258,16 @@ export const dict = {
   "settings.general.row.showCustomAgents.title": "Vis agent",
   "settings.general.row.showCustomAgents.description":
     "Bytt mellom agenter i skrivefeltet. Når velgeren er skjult, brukes Build-agenten som standard.",
+  "settings.general.row.showSessionReview.title": "Knapp for gjennomgang av økt",
+  "settings.general.row.showSessionReview.description": "Vis gjennomgangsknappen (endringer) på verktøylinjen i økten",
+  "settings.general.row.showSessionFiles.title": "Knapp for filer i økten",
+  "settings.general.row.showSessionFiles.description": "Vis filutforskerknappen på verktøylinjen i økten",
+  "settings.general.row.showSessionTerminal.title": "Knapp for terminal i økten",
+  "settings.general.row.showSessionTerminal.description": "Vis terminalknappen på verktøylinjen i økten",
+  "settings.general.row.showSessionTasks.title": "Knapp for oppgaver i økten",
+  "settings.general.row.showSessionTasks.description": "Vis oppgaveknappen på verktøylinjen i økten",
+  "settings.general.row.showSessionProgress.title": "Knapp for fremdrift i økten",
+  "settings.general.row.showSessionProgress.description": "Vis knappen for øktens fremdrift (kontekst) på verktøylinjen",
   "settings.general.row.newInterface.title": "Nytt oppsett",
   "settings.general.row.newInterface.badge": "Ny",
   "settings.general.row.newInterface.description":

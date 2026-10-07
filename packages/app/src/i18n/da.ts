@@ -204,6 +204,11 @@ export const dict = {
   "provider.custom.error.baseURL.format": "Skal starte med http:// eller https://",
   "provider.custom.error.required": "Påkrævet",
   "provider.custom.error.duplicate": "Duplikeret",
+  "provider.omniroute.title": "OmniRoute / 9router",
+  "provider.omniroute.description": "Forbind en OmniRoute- eller 9router-gateway. Modeller hentes automatisk fra endpointet.",
+  "provider.omniroute.field.baseURL.placeholder": "https://omniroute.example.com/v1",
+  "dialog.provider.omniroute.label": "OmniRoute / 9router",
+  "settings.providers.omniroute.description": "OpenAI-kompatibel gateway. Angiv kun endpoint og API-nøgle.",
 
   "provider.disconnect.toast.disconnected.title": "{{provider}} frakoblet",
   "provider.disconnect.toast.disconnected.description": "Modeller fra {{provider}} er ikke længere tilgængelige.",
@@ -826,6 +831,16 @@ export const dict = {
   "settings.general.row.showCustomAgents.title": "Vis agent",
   "settings.general.row.showCustomAgents.description":
     "Skift mellem agenter i promptfeltet. Når vælgeren er skjult, bruges Build-agenten som standard.",
+  "settings.general.row.showSessionReview.title": "Knap til gennemgang af session",
+  "settings.general.row.showSessionReview.description": "Vis gennemgangsknappen (ændringer) på sessionens værktøjslinje",
+  "settings.general.row.showSessionFiles.title": "Knap til sessionens filer",
+  "settings.general.row.showSessionFiles.description": "Vis filbrowserknappen på sessionens værktøjslinje",
+  "settings.general.row.showSessionTerminal.title": "Knap til sessionens terminal",
+  "settings.general.row.showSessionTerminal.description": "Vis terminalknappen på sessionens værktøjslinje",
+  "settings.general.row.showSessionTasks.title": "Knap til sessionens opgaver",
+  "settings.general.row.showSessionTasks.description": "Vis opgaveknappen på sessionens værktøjslinje",
+  "settings.general.row.showSessionProgress.title": "Knap til sessionens fremskridt",
+  "settings.general.row.showSessionProgress.description": "Vis knappen for sessionens fremskridt (kontekst) på værktøjslinjen",
   "settings.general.row.reasoningSummaries.title": "Vis ræsonneringsoversigter",
   "settings.general.row.reasoningSummaries.description": "Vis oversigter over modellens ræsonnering på tidslinjen",
 

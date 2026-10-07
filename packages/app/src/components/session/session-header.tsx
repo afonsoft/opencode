@@ -1,5 +1,6 @@
 import { AppIcon } from "@opencode-ai/ui/app-icon"
 import { Button } from "@opencode-ai/ui/button"
+import { copyText } from "@opencode-ai/ui/clipboard"
 import { DropdownMenu } from "@opencode-ai/ui/dropdown-menu"
 import { Icon } from "@opencode-ai/ui/icon"
 import { IconButton } from "@opencode-ai/ui/icon-button"
@@ -21,6 +22,7 @@ import { useSettings } from "@/context/settings"
 import { useSync } from "@/context/sync"
 import { useTerminal } from "@/context/terminal"
 import { focusTerminalById } from "@/pages/session/helpers"
+import { SESSION_OPEN_FILE_TAB } from "@/context/layout-tabs"
 import { useSessionLayout } from "@/pages/session/session-layout"
 import { messageAgentColor } from "@/utils/agent"
 import { decode64 } from "@/utils/base64"
@@ -146,7 +148,7 @@ export function SessionHeader() {
   const settings = useSettings()
   const sync = useSync()
   const terminal = useTerminal()
-  const { params, view } = useSessionLayout()
+  const { params, view, tabs } = useSessionLayout()
 
   const projectDirectory = createMemo(() => decode64(params.dir) ?? "")
   const project = createMemo(() => {
@@ -217,6 +219,17 @@ export function SessionHeader() {
     focusTerminalById(id)
   }
 
+  const todos = () => (params.id ? (sync().data.todo[params.id] ?? []) : [])
+  const openSideTab = (tab: string) => {
+    if (!view().reviewPanel.opened()) view().reviewPanel.open()
+    void tabs().open(tab)
+  }
+  const activeTab = () => tabs().active()
+  const fileTabActive = () => {
+    const active = activeTab()
+    return !!active && (active === SESSION_OPEN_FILE_TAB || active.startsWith("file://"))
+  }
+
   const [prefs, setPrefs] = persisted(Persist.global("open.app"), createStore({ app: "finder" as OpenApp }))
   const [menu, setMenu] = createStore({ open: false })
   const [openRequest, setOpenRequest] = createStore({
@@ -237,11 +250,59 @@ export function SessionHeader() {
   const v2ActionsState = createMemo<SessionHeaderV2ActionsState>(() => ({
     statusVisible: status(),
     statusLabel: language.t("status.popover.trigger"),
-    reviewLabel: language.t("command.review.toggle"),
-    reviewKeybind: reviewTooltipKeybind(command),
-    reviewVisible: isDesktop(),
-    reviewOpened: view().reviewPanel.opened(),
-    onReviewToggle: () => view().reviewPanel.toggle(),
+    tools: [
+      {
+        id: "files",
+        label: language.t("palette.group.files"),
+        icon: "folder",
+        keybind: [] as string[],
+        visible: settings.general.showSessionFiles(),
+        opened: view().reviewPanel.opened() && fileTabActive(),
+        disabled: false,
+        onSelect: () => openSideTab(SESSION_OPEN_FILE_TAB),
+      },
+      {
+        id: "tasks",
+        label: language.t("session.todo.title"),
+        icon: "check",
+        keybind: [] as string[],
+        visible: settings.general.showSessionTasks(),
+        opened: todos().length > 0 && !view().todoCollapsed.get(),
+        disabled: todos().length === 0,
+        onSelect: () => view().todoCollapsed.set(!view().todoCollapsed.get()),
+      },
+      {
+        id: "progress",
+        label: language.t("session.tab.context"),
+        icon: "status",
+        keybind: [] as string[],
+        visible: settings.general.showSessionProgress(),
+        opened: view().reviewPanel.opened() && activeTab() === "context",
+        disabled: false,
+        onSelect: () => openSideTab("context"),
+      },
+      {
+        id: "terminal",
+        label: language.t("command.terminal.toggle"),
+        icon: "monitor",
+        keybind: command.keybindParts("terminal.toggle"),
+        visible: settings.general.showSessionTerminal(),
+        opened: view().terminal.opened(),
+        disabled: false,
+        onSelect: toggleTerminal,
+      },
+      {
+        id: "review",
+        label: language.t("command.review.toggle"),
+        icon: "sidebar-right",
+        keybind: reviewTooltipKeybind(command),
+        visible: settings.general.showSessionReview(),
+        opened: view().reviewPanel.opened(),
+        disabled: false,
+        onSelect: () => view().reviewPanel.toggle(),
+      },
+    ],
+    toolsVisible: isDesktop(),
   }))
 
   const selectApp = (app: OpenApp) => {
@@ -268,17 +329,18 @@ export function SessionHeader() {
   const copyPath = () => {
     const directory = projectDirectory()
     if (!directory) return
-    navigator.clipboard
-      .writeText(directory)
-      .then(() => {
-        showToast({
-          variant: "success",
-          icon: "circle-check",
-          title: language.t("session.share.copy.copied"),
-          description: directory,
-        })
+    void copyText(directory).then((copied) => {
+      if (!copied) {
+        showToast({ title: language.t("common.requestFailed") })
+        return
+      }
+      showToast({
+        variant: "success",
+        icon: "circle-check",
+        title: language.t("session.share.copy.copied"),
+        description: directory,
       })
-      .catch((err: unknown) => showRequestError(language, err))
+    })
   }
 
   const [centerMount, setCenterMount] = createSignal<HTMLElement | null>(null)
@@ -516,19 +578,31 @@ export function SessionHeader() {
   )
 }
 
+type SessionHeaderTool = {
+  id: string
+  label: string
+  icon: string
+  keybind: string[]
+  visible: boolean
+  opened: boolean
+  disabled: boolean
+  onSelect: () => void
+}
+
+const toolAriaControls = (tool: SessionHeaderTool) => {
+  if (tool.id === "terminal") return "terminal-panel"
+  if (tool.id === "files" || tool.id === "progress" || tool.id === "review") return "review-panel"
+  return undefined
+}
+
 type SessionHeaderV2ActionsState = {
   statusVisible: boolean
   statusLabel: string
-  reviewLabel: string
-  reviewKeybind: string[]
-  reviewVisible: boolean
-  reviewOpened: boolean
-  onReviewToggle: () => void
+  tools: SessionHeaderTool[]
+  toolsVisible: boolean
 }
 
 function SessionHeaderV2Actions(props: { state: SessionHeaderV2ActionsState }) {
-  const language = useLanguage()
-
   return (
     <div class="flex items-center gap-2">
       <Show when={props.state.statusVisible}>
@@ -536,32 +610,39 @@ function SessionHeaderV2Actions(props: { state: SessionHeaderV2ActionsState }) {
           <StatusPopoverV2 />
         </Tooltip>
       </Show>
-      <Show when={props.state.reviewVisible}>
-        <TooltipV2
-          class="shrink-0"
-          placement="bottom"
-          value={
-            <>
-              {props.state.reviewLabel}
-              <Show when={props.state.reviewKeybind.length > 0}>
-                <KeybindV2 keys={props.state.reviewKeybind} variant="neutral" />
-              </Show>
-            </>
-          }
-        >
-          <IconButtonV2
-            type="button"
-            variant="ghost-muted"
-            size="large"
-            class="!w-9 shrink-0"
-            state={props.state.reviewOpened ? "pressed" : undefined}
-            onClick={props.state.onReviewToggle}
-            aria-label={props.state.reviewLabel}
-            aria-expanded={props.state.reviewOpened}
-            aria-controls="review-panel"
-            icon={<IconV2 name="sidebar-right" />}
-          />
-        </TooltipV2>
+      <Show when={props.state.toolsVisible}>
+        <For each={props.state.tools}>
+          {(tool) => (
+            <Show when={tool.visible}>
+              <TooltipV2
+                class="shrink-0"
+                placement="bottom"
+                value={
+                  <>
+                    {tool.label}
+                    <Show when={tool.keybind.length > 0}>
+                      <KeybindV2 keys={tool.keybind} variant="neutral" />
+                    </Show>
+                  </>
+                }
+              >
+                <IconButtonV2
+                  type="button"
+                  variant="ghost-muted"
+                  size="large"
+                  class="!w-9 shrink-0"
+                  state={tool.opened ? "pressed" : undefined}
+                  disabled={tool.disabled}
+                  onClick={tool.onSelect}
+                  aria-label={tool.label}
+                  aria-expanded={tool.opened}
+                  aria-controls={toolAriaControls(tool)}
+                  icon={<IconV2 name={tool.icon} />}
+                />
+              </TooltipV2>
+            </Show>
+          )}
+        </For>
       </Show>
     </div>
   )

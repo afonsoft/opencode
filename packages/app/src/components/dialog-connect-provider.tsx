@@ -37,6 +37,7 @@ import { usePlatform } from "@/context/platform"
 import { useSettings } from "@/context/settings"
 import { popularProviders, useProviders } from "@/hooks/use-providers"
 import { CustomProviderForm } from "./dialog-custom-provider"
+import { OMNIROUTE_ID, OMNIROUTE_PROVIDER_ID, OmnirouteProviderForm } from "./dialog-omniroute-provider"
 import { decode64 } from "@/utils/base64"
 
 const CUSTOM_ID = "_custom"
@@ -77,7 +78,16 @@ export const DialogConnectProvider: Component<{
         <Match when={controller.selected() === CUSTOM_ID}>
           <CustomProviderForm autofocus={!newLayout()} />
         </Match>
-        <Match when={controller.selected() && controller.selected() !== CUSTOM_ID ? controller.selected() : undefined}>
+        <Match when={controller.selected() === OMNIROUTE_ID}>
+          <OmnirouteProviderForm autofocus={!newLayout()} />
+        </Match>
+        <Match
+          when={
+            controller.selected() && controller.selected() !== CUSTOM_ID && controller.selected() !== OMNIROUTE_ID
+              ? controller.selected()
+              : undefined
+          }
+        >
           {(provider) => (
             <ProviderConnection
               provider={provider()}
@@ -180,13 +190,19 @@ function ProviderPicker(props: {
       key={(x) => x?.id}
       items={() => {
         language.locale()
-        return [{ id: CUSTOM_ID, name: customLabel() }, ...providers.all().values()]
+        return [
+          { id: OMNIROUTE_ID, name: language.t("dialog.provider.omniroute.label") },
+          { id: CUSTOM_ID, name: customLabel() },
+          ...providers.all().values(),
+        ].filter((x) => x.id !== OMNIROUTE_PROVIDER_ID)
       }}
       filterKeys={["id", "name"]}
-      groupBy={(x) => (popularProviders.includes(x.id) ? popularGroup() : otherGroup())}
+      groupBy={(x) => (x.id === OMNIROUTE_ID || popularProviders.includes(x.id) ? popularGroup() : otherGroup())}
       sortBy={(a, b) => {
         if (a.id === CUSTOM_ID) return -1
         if (b.id === CUSTOM_ID) return 1
+        if (a.id === OMNIROUTE_ID) return 1
+        if (b.id === OMNIROUTE_ID) return -1
         if (popularProviders.includes(a.id) && popularProviders.includes(b.id))
           return popularProviders.indexOf(a.id) - popularProviders.indexOf(b.id)
         return a.name.localeCompare(b.name)
@@ -239,17 +255,24 @@ function ProviderPickerV2(props: {
   })
   const featured = ["opencode", "opencode-go", "anthropic", "openai", "google", "openrouter", "vercel"]
   const custom = () => ({ id: CUSTOM_ID, name: language.t("dialog.provider.custom.label") })
+  const omniroute = () => ({ id: OMNIROUTE_ID, name: language.t("dialog.provider.omniroute.label") })
   const all = createMemo(() => {
     language.locale()
     const query = store.filter.trim().toLowerCase()
-    const values = [custom(), ...providers.all().values()]
+    const values = [omniroute(), custom(), ...providers.all().values()].filter(
+      (provider) => provider.id !== OMNIROUTE_PROVIDER_ID,
+    )
     if (!query) return values
     return values.filter((provider) => `${provider.id} ${provider.name}`.toLowerCase().includes(query))
   })
   const popular = createMemo(() =>
     all()
       .filter((provider) => featured.includes(provider.id))
-      .sort((a, b) => featured.indexOf(a.id) - featured.indexOf(b.id)),
+      .sort((a, b) => {
+        if (a.id === OMNIROUTE_ID) return 1
+        if (b.id === OMNIROUTE_ID) return -1
+        return featured.indexOf(a.id) - featured.indexOf(b.id)
+      }),
   )
   const other = createMemo(() =>
     all()

@@ -5,6 +5,7 @@ import { Collapsible } from "@opencode-ai/ui/collapsible"
 import { Icon } from "@opencode-ai/ui/icon"
 import { IconButton } from "@opencode-ai/ui/icon-button"
 import { Tooltip } from "@opencode-ai/ui/tooltip"
+import { copyText } from "@opencode-ai/ui/clipboard"
 import { useI18n } from "@opencode-ai/ui/context/i18n"
 
 export interface ToolErrorCardProps extends Omit<ComponentProps<typeof Card>, "children" | "variant"> {
@@ -89,7 +90,7 @@ export function ToolErrorCard(props: ToolErrorCardProps) {
   const copy = async () => {
     const text = cleaned()
     if (!text) return
-    await navigator.clipboard.writeText(text)
+    if (!(await copyText(text))) return
     setState("copied", true)
     setTimeout(() => setState("copied", false), 2000)
   }

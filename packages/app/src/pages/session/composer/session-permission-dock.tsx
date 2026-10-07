@@ -19,6 +19,19 @@ export function SessionPermissionDock(props: {
     return value
   }
 
+  const toolInput = () => {
+    const input = props.request.metadata?.["input"]
+    if (!input || typeof input !== "object" || Array.isArray(input)) return
+    const entries = Object.entries(input as Record<string, unknown>)
+    if (entries.length === 0) return
+    return JSON.stringify(input)
+  }
+
+  const patterns = () => {
+    const values = props.request.patterns.filter((pattern) => pattern !== "*")
+    return values.length > 0 ? values : (toolInput() ? [] : props.request.patterns)
+  }
+
   return (
     <DockPrompt
       kind="permission"
@@ -52,18 +65,29 @@ export function SessionPermissionDock(props: {
         </>
       }
     >
-      <Show when={toolDescription()}>
-        <div data-slot="permission-row">
-          <span data-slot="permission-spacer" aria-hidden="true" />
-          <div data-slot="permission-hint">{toolDescription()}</div>
+      <div data-slot="permission-row">
+        <span data-slot="permission-spacer" aria-hidden="true" />
+        <div data-slot="permission-hint">
+          <Show when={toolDescription()} fallback={<code class="text-12-regular text-text-base break-all">{props.request.permission}</code>}>
+            {toolDescription()}
+          </Show>
         </div>
-      </Show>
+      </div>
 
-      <Show when={props.request.patterns.length > 0}>
+      <Show when={toolInput()}>
         <div data-slot="permission-row">
           <span data-slot="permission-spacer" aria-hidden="true" />
           <div data-slot="permission-patterns">
-            <For each={props.request.patterns}>
+            <code class="text-12-regular text-text-base break-all">{toolInput()}</code>
+          </div>
+        </div>
+      </Show>
+
+      <Show when={patterns().length > 0}>
+        <div data-slot="permission-row">
+          <span data-slot="permission-spacer" aria-hidden="true" />
+          <div data-slot="permission-patterns">
+            <For each={patterns()}>
               {(pattern) => <code class="text-12-regular text-text-base break-all">{pattern}</code>}
             </For>
           </div>

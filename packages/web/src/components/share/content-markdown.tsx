@@ -70,5 +70,6 @@ export function ContentMarkdown(props: Props) {
 function strip(text: string): string {
   const wrappedRe = /^\s*<([A-Za-z]\w*)>\s*([\s\S]*?)\s*<\/\1>\s*$/
   const match = text.match(wrappedRe)
-  return match ? match[2] : text
+  const body = match ? match[2] : text
+  return body.replace(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/, (_all, yaml: string) => `\`\`\`yaml\n${yaml.trimEnd()}\n\`\`\`\n\n`)
 }

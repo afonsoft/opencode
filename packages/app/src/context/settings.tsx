@@ -33,6 +33,11 @@ export interface Settings {
     shellToolPartsExpanded: boolean
     editToolPartsExpanded: boolean
     showCustomAgents: boolean
+    showSessionReview: boolean
+    showSessionFiles: boolean
+    showSessionTerminal: boolean
+    showSessionTasks: boolean
+    showSessionProgress: boolean
     mobileTitlebarPosition: "top" | "bottom"
     newLayoutDesigns?: boolean
     layoutTransitionEligible?: boolean
@@ -194,6 +199,11 @@ const defaultSettings: Settings = {
     shellToolPartsExpanded: false,
     editToolPartsExpanded: false,
     showCustomAgents: false,
+    showSessionReview: true,
+    showSessionFiles: true,
+    showSessionTerminal: true,
+    showSessionTasks: true,
+    showSessionProgress: true,
     mobileTitlebarPosition: "top",
   },
   appearance: {
@@ -420,6 +430,32 @@ export const { use: useSettings, provider: SettingsProvider } = createSimpleCont
         showCustomAgents,
         setShowCustomAgents(value: boolean) {
           setStore("general", "showCustomAgents", value)
+        },
+        showSessionReview: withFallback(() => store.general?.showSessionReview, defaultSettings.general.showSessionReview),
+        setShowSessionReview(value: boolean) {
+          setStore("general", "showSessionReview", value)
+        },
+        showSessionFiles: withFallback(() => store.general?.showSessionFiles, defaultSettings.general.showSessionFiles),
+        setShowSessionFiles(value: boolean) {
+          setStore("general", "showSessionFiles", value)
+        },
+        showSessionTerminal: withFallback(
+          () => store.general?.showSessionTerminal,
+          defaultSettings.general.showSessionTerminal,
+        ),
+        setShowSessionTerminal(value: boolean) {
+          setStore("general", "showSessionTerminal", value)
+        },
+        showSessionTasks: withFallback(() => store.general?.showSessionTasks, defaultSettings.general.showSessionTasks),
+        setShowSessionTasks(value: boolean) {
+          setStore("general", "showSessionTasks", value)
+        },
+        showSessionProgress: withFallback(
+          () => store.general?.showSessionProgress,
+          defaultSettings.general.showSessionProgress,
+        ),
+        setShowSessionProgress(value: boolean) {
+          setStore("general", "showSessionProgress", value)
         },
         mobileTitlebarPosition: withFallback(
           () => store.general?.mobileTitlebarPosition,

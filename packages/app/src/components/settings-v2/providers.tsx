@@ -10,6 +10,7 @@ import { useServerProtocol, useServerSDK } from "@/context/server-sdk"
 import { useServerSync } from "@/context/server-sync"
 import { DialogConnectProvider, useProviderConnectController } from "../dialog-connect-provider"
 import { DialogCustomProvider } from "../dialog-custom-provider"
+import { OMNIROUTE_ID } from "../dialog-omniroute-provider"
 import { SettingsListV2 } from "./parts/list"
 import "./settings-v2.css"
 
@@ -223,6 +224,30 @@ export const SettingsProvidersV2: Component<{
                 </div>
               )}
             </For>
+
+            <Show when={protocol() === "v1"}>
+              <div class="settings-v2-provider-row" data-component="omniroute-provider-section">
+                <div class="settings-v2-provider-lead">
+                  <ProviderIcon
+                    id="synthetic"
+                    width={PROVIDER_ICON_SIZE}
+                    height={PROVIDER_ICON_SIZE}
+                    class="settings-v2-provider-icon shrink-0"
+                  />
+                  <div class="settings-v2-provider-copy">
+                    <div class="settings-v2-provider-main">
+                      <span class="settings-v2-provider-name">{language.t("provider.omniroute.title")}</span>
+                    </div>
+                    <p class="settings-v2-provider-description">
+                      {language.t("settings.providers.omniroute.description")}
+                    </p>
+                  </div>
+                </div>
+                <ButtonV2 size="normal" variant="neutral" icon="plus" onClick={() => connect(OMNIROUTE_ID)}>
+                  {language.t("common.connect")}
+                </ButtonV2>
+              </div>
+            </Show>
 
             <Show when={protocol() === "v1"}>
               <div class="settings-v2-provider-row" data-component="custom-provider-section">
