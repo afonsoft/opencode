@@ -87,6 +87,38 @@ describe("HTTP transport timeouts", () => {
     }),
   )
 
+  // SSE comment heartbeats keep a stalled generation "warm" at the byte level without
+  // ever dispatching an event, so they must not extend the chunk timeout. Runs on the
+  // live clock so heartbeats arriving faster than the chunk timeout would keep a
+  // byte-level stall timer alive forever.
+  it.live("fails while a stalled stream only emits SSE comment heartbeats", () =>
+    Effect.gen(function* () {
+      const encoder = new TextEncoder()
+      const layer = dynamicResponse((input) =>
+        Effect.sync(() =>
+          input.respond(
+            new ReadableStream<Uint8Array>({
+              start(controller) {
+                controller.enqueue(encoder.encode(sseRaw(`data: ${JSON.stringify(deltaChunk({ content: "Hi" }))}`)))
+              },
+              async pull(controller) {
+                await new Promise((resolve) => setTimeout(resolve, 5))
+                controller.enqueue(encoder.encode(": keepalive\n\n"))
+              },
+            }),
+            SSE,
+          ),
+        ),
+      )
+      const error = yield* LLMClient.generate(
+        LLM.request({ model, prompt: "Hello", http: { chunkTimeout: 25 } }),
+      ).pipe(Effect.provide(layer), Effect.flip)
+
+      expect(error.reason).toMatchObject({ _tag: "Transport", transport: "http", operation: "read", code: "Timeout" })
+      expect(error.reason.http).toMatchObject({ status: 200 })
+    }),
+  )
+
   it.effect("applies a configured header timeout", () =>
     Effect.gen(function* () {
       const fiber = yield* LLMClient.generate(

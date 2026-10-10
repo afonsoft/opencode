@@ -119,20 +119,27 @@ export const httpJson = <Body, Frame>(input: HttpJsonInput<Body, Frame>): HttpJs
       )
       const http = RequestExecutor.responseHttp(response)
       const remaining = Duration.subtract(total, Duration.millis((yield* Clock.currentTimeMillis) - started))
+      // SSE comment heartbeats (`: keepalive`) arrive as bytes but produce no frame, so for
+      // SSE the stall limit rides the framed stream — only real events re-arm it. Every other
+      // framing keeps byte-level progress.
+      const sse = prepared.framing.id === "sse"
+      const stall = Stream.timeoutOrElse({
+        duration: timeoutDuration(request.http?.chunkTimeout),
+        orElse: () => Stream.fail(timeout("read", "Timed out waiting for response data", http)),
+      })
       return {
-        frames: prepared.framing.frame(
-          RequestExecutor.responseStream(response).pipe(
-            Stream.timeoutOrElse({
-              duration: timeoutDuration(request.http?.chunkTimeout),
-              orElse: () => Stream.fail(timeout("read", "Timed out waiting for response data", http)),
-            }),
-            Stream.interruptWhen(
-              Effect.sleep(remaining).pipe(
-                Effect.andThen(Effect.fail(timeout("read", "Timed out waiting for the response to complete", http))),
+        frames: prepared.framing
+          .frame(
+            RequestExecutor.responseStream(response).pipe(
+              sse ? (stream) => stream : stall,
+              Stream.interruptWhen(
+                Effect.sleep(remaining).pipe(
+                  Effect.andThen(Effect.fail(timeout("read", "Timed out waiting for the response to complete", http))),
+                ),
               ),
             ),
-          ),
-        ),
+          )
+          .pipe(sse ? stall : (stream) => stream),
         http,
         body: prepared.framing.body,
       }
